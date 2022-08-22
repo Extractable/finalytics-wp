@@ -1,0 +1,134 @@
+.site-footer {
+  background: $mainColor url("../img/footer-bg.svg") no-repeat top right;
+  color: $white;
+  padding: 32px 0 30px;
+  @include media-breakpoint-up(md) {
+    padding: 81px 0 45px;
+  }
+}
+.footer-brand {
+  height: 100%;
+  position: relative;
+  &:after {
+    content: "";
+    background: rgba(255, 255, 255, .4);
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
+  }
+  .widget {
+    margin-bottom: 30px;
+    text-align: center;
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 55px;
+      text-align: left;
+    }
+    .acf-social-list {
+      justify-content: center;
+      @include media-breakpoint-up(lg) {
+        justify-content: flex-start;
+      }
+    }
+  }
+}
+.footer-info {
+  .row  {
+    [class*='col'] {
+      @include media-breakpoint-down(sm){
+        margin-bottom: 45px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .widget_block {
+    margin-bottom: 15px;
+  }
+  h5 {
+    a {
+      font-size: $fs-rg;
+      font-weight: $fw-bold;
+      color: $white;
+      text-decoration: none;
+      &:hover {
+        color: $turquoise;
+      }
+    }
+  }
+  .menu {
+    li {
+      a {
+        font-size: $fs-rg;
+        font-weight: $fw-medium;
+        color: $gray;
+        text-decoration: none;
+        padding: 6px 0;
+        &:hover {
+          color: $turquoise;
+        }
+      }
+    }
+  }
+}
+.footer-link {
+  font-size: $fs-rg;
+  font-weight: $fw-medium;
+  color:$gray;
+  text-decoration: none;
+  &:hover {
+    color: $turquoise;
+  }
+}
+.footer-copyright {
+  margin-top: 20px;
+  text-align: center;
+  @include media-breakpoint-up(md) {
+    margin-top: 100px;
+    text-align: left;
+  }
+  .site-info {
+    font-size: $fs-xs;
+    font-weight: $fw-medium;
+    color: $white;
+    text-decoration: none;
+    line-height: 1.2;
+    display: inline-block;
+    vertical-align: center;
+    margin-right: 23px;
+    &:hover {
+      color: $turquoise;
+    }
+  }
+  .widget {
+    display: inline-block;
+    vertical-align: center;
+  }
+  .menu {
+    display: flex;
+    li {
+      line-height: 1.2;
+      margin-right: 23px;
+      &:last-child {
+        margin-right: 0;
+      }
+      a {
+        font-size: $fs-xs;
+        font-weight: $fw-medium;
+        color: $white;
+        text-decoration: none;
+        padding: 0;
+        &:hover {
+          color: $turquoise;
+        }
+      }
+    }
+  }
+}

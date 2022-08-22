@@ -1,0 +1,235 @@
+.hero {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 120px 0 45px;
+  @include media-breakpoint-up(md){
+    height: 714px;
+    padding: 0;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    height: 504px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    height: 169px;
+    bottom: 0;
+    left: -115px;
+    right: 0;
+    z-index: 1;
+  }
+  &.show-promo {
+    padding: 153px 0 45px;
+    @include media-breakpoint-up(md){
+      height: 925px;
+      padding: 0;
+    }
+    .hero-wrap {
+      @include media-breakpoint-up(md){
+        margin-top: -144px;
+      }
+      padding-top: 0;
+    }
+    &:after {
+      height: 320px;
+      left: 0;
+      @include media-breakpoint-up(md){
+        height: 350px;
+      }
+    }
+    .decor-element {
+      @include media-breakpoint-down(sm){
+        bottom: 92px;
+      }
+    }
+  }
+  .hero-wrap {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 95px;
+    @include media-breakpoint-up(md) {
+      padding-top: 65px;
+      margin-bottom: 0;
+    }
+    .btn {
+      margin-top: 40px;
+    }
+  }
+  .hero-title {
+    margin-bottom: 25px;
+  }
+  .hero-text {
+    font-size: $fs-rg;
+    @include media-breakpoint-up(md){
+      font-size: $fs-lg;
+    }
+  }
+  .hero_promo {
+    width: 100%;
+    max-width: 300px;
+    padding: 22px;
+    z-index: 2;
+    margin: 0 auto;
+    border: 1px solid;
+    border-radius: $border-radius;
+    position: relative;
+    text-align: center;
+    @include media-breakpoint-up(md){
+      max-width: 700px;
+      margin-left: -350px;
+      padding: 25px 35px;
+      bottom: 73px;
+      width: 100%;
+      position: absolute;
+      left: 50%;
+      display: flex;
+      align-items: center;
+      text-align: left;
+    }
+    @include media-breakpoint-up(lg){
+      max-width: 880px;
+      margin-left: -440px;
+      padding: 32px 60px;
+    }
+    @include media-breakpoint-up(xl){
+      max-width: 1012px;
+      margin-left: -506px;
+      padding: 32px 100px;
+    }
+  }
+  .hero_promo__title {
+    margin: 0 0 6px 0;
+    @include media-breakpoint-up(md){
+      margin: 0 12px 0 0;
+    }
+    @include media-breakpoint-up(lg){
+      margin: 0 22px 0 0;
+    }
+  }
+  .hero_promo__image {
+    margin: 0 0 11px 0;
+    @include media-breakpoint-up(md){
+      margin: 0 24px 0 0;
+    }
+    @include media-breakpoint-up(md){
+      margin: 0 74px 0 0;
+    }
+  }
+  .hero_promo__info-top {
+    display: flex;
+    font-size: $fs-lg;
+    font-weight: $fw-semibold;
+    margin-bottom: 21px;
+    justify-content: center;
+    @include media-breakpoint-up(md){
+      justify-content: flex-start;
+      margin-bottom: 16px;
+    }
+  }
+  .hero_promo__text {
+    font-size: $fs-rg;
+  }
+  .hero_promo__date {
+    position: relative;
+    padding-right: 25px;
+    margin-right: 25px;
+    @include media-breakpoint-up(md){
+      padding-right: 36px;
+      margin-right: 35px;
+    }
+    &:after {
+      content: "";
+      height: 18px;
+      width: 2px;
+      position: absolute;
+      top: 3px;
+      right: 0;
+    }
+  }
+  .decor-element {
+    position: absolute;
+    width: 392px;
+    height: 315px;
+    left: 50%;
+    margin-left: -195px;
+    bottom: -130px;
+    background: $blue-light;
+    opacity: 0.7;
+    filter: blur(160.628px);
+    display: none;
+    z-index: 0;
+    @include media-breakpoint-up(md){
+      width: 1165px;
+      height: 645px;
+      margin-left: -600px;
+      bottom: -400px;
+      filter: blur(418px);
+    }
+  }
+  &.scheme-dark {
+    background: $mainColor;
+    &:before {
+      background: url("../img/hero-bg-top1.svg") repeat-x bottom left;
+    }
+    &:after {
+      background: url("../img/hero-bg-bottom1.svg") repeat-x top center;
+    }
+    .hero-title {
+      color: $white;
+    }
+    .hero-text {
+      color: $gray;
+    }
+    .decor-element {
+      display: block;
+    }
+    .hero_promo {
+      background: $dark-blue;
+      color: $white;
+      border-color: $indigo;
+    }
+    .hero_promo__text {
+      color: $gray;
+    }
+    .hero_promo__date {
+      &:after {
+        background: $white;
+      }
+    }
+  }
+  &.scheme-light {
+    &:before {
+      background: url("../img/hero-bg-top-dark.svg") repeat-x bottom left;
+    }
+    &:after {
+      background: url("../img/hero-bg-bottom-dark.svg") repeat-x top center;
+    }
+    .hero-title {
+      color: $mainColor;
+    }
+    .hero-text {
+      color: $blue-gray;
+    }
+    .hero_promo {
+      background: $dark-blue;
+      color: $white;
+      border-color: $indigo;
+    }
+    .hero_promo__text {
+      color: $gray;
+    }
+    .hero_promo__date {
+      &:after {
+        background: $white;
+      }
+    }
+  }
+}

@@ -1,0 +1,113 @@
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+	font-family: $ff-title;
+	font-weight: $fw-bold;
+	line-height: $lh-title;
+	margin: 0 0 1rem
+}
+
+h1, .h1 {
+	margin: 0;
+	width: 100%;
+	font-weight: $fw-regular;
+	font-size: 36px;
+	line-height: 43px;
+	@include media-breakpoint-up(md){
+		line-height: 70px;
+		font-size: 56px;
+	}
+}
+
+h2, .h2 {
+	font-size: 28px;
+	line-height: $lh-title;
+	font-weight: $fw-medium;
+	margin-bottom: 24px;
+	letter-spacing: -1px;
+	width: 100%;
+	@include media-breakpoint-up(md){
+		font-size: 34px;
+	}
+	@include media-breakpoint-up(lg){
+		font-size: 44px;
+	}
+}
+
+h3, .h3 {
+	font-size: 28px;
+	line-height: $lh-title;
+	font-weight: $fw-bold;
+	margin-bottom: 16px;
+	font-family: $ff-title;
+	letter-spacing: -1px;
+	@include media-breakpoint-up(md){
+		font-size: 31px;
+	}
+	@include media-breakpoint-up(lg){
+		font-size: 36px;
+	}
+}
+
+.h3-secondary {
+	font-family: $ff;
+	font-size: 28px;
+	line-height: $lh-title;
+	font-weight: $fw-bold;
+	margin-bottom: 16px;
+	letter-spacing: -1px;
+	@include media-breakpoint-up(md){
+		font-size: 31px;
+	}
+	@include media-breakpoint-up(lg){
+		font-size: 36px;
+	}
+}
+
+h4, .h4 {
+	font-size: 24px;
+	line-height: 34px;
+	letter-spacing: -0.5px;
+	font-weight: $fw-bold;
+	margin-bottom: 16px;
+	font-family: $ff;
+
+	@include media-breakpoint-down(xs) {
+		font-size: 20px;
+	}
+}
+
+h5, .h5 {
+	font-family: $ff;
+	font-size: $fs-rg;
+	font-weight: $fw-bold;
+}
+
+h6, .h6 {
+	font-size: $fs-lg;
+}
+
+a {
+	display: inline-block;
+	text-decoration: underline;
+	transition: color ease-out $transition;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+p {
+	margin-top: 0;
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+}
+
+b, strong {
+	font-weight: $fw-bold;
+}

@@ -1,0 +1,79 @@
+.social{
+	display: flex;
+	justify-content: center;
+	
+	a{
+		height: 36px;
+		width: 36px;
+		border-radius: 50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		backdrop-filter: blur(30px);
+		margin: 0 2px;
+		padding: 5px;
+		transition: background-color ease-out $transition, box-shadow ease-out $transition;
+		
+
+		&:hover{
+			background-color: rgba(45, 2, 2, 0.2);
+			box-shadow: inset 0px -5px 12px rgba(11, 130, 203, 0.35), inset 0px 2px 4px rgba(255, 255, 255, 0.2);
+		}
+
+		&.linkedin{
+			&:hover{
+				background-color: rgba(45, 2, 2, 0.2);
+				box-shadow: inset 0px -5px 12px rgba(10, 102, 194, 0.35), inset 0px 2px 4px rgba(255, 255, 255, 0.2);
+			}
+		}
+
+		&.instagram{
+			&:hover{
+				background-color: rgba(45, 2, 2, 0.2);
+				box-shadow: inset 0px -5px 12px rgba(144, 14, 176, 0.35), inset 0px 2px 4px rgba(255, 255, 255, 0.2);
+			}
+		}
+
+		&.upwork{
+			&:hover{
+				background-color: rgba(45, 48, 61, 0.2);
+				box-shadow: inset 0px -5px 12px rgba(9, 221, 183, 0.35), inset 0px 2px 4px rgba(255, 255, 255, 0.1);
+			}
+		}
+
+		&.clutch{
+			&:hover{
+				background-color: rgba(45, 2, 2, 0.2);
+				box-shadow: inset 0px -5px 12px rgba(200, 39, 41, 0.35), inset 0px 2px 4px rgba(255, 255, 255, 0.2);
+			}
+		}
+
+		&.behance{
+			&:hover{
+				background-color: rgba(45, 2, 2, 0.2);
+				box-shadow: inset 0px -5px 12px rgba(0, 87, 255, 0.35), inset 0px 2px 4px rgba(255, 255, 255, 0.2);
+			}
+		}
+
+		&.dribble{
+			&:hover{
+				background-color: rgba(45, 48, 61, 0.2);
+				box-shadow: inset 0px -5px 12px rgba(197, 31, 97, 0.35), inset 0px 2px 4px rgba(255, 255, 255, 0.1);
+			}
+		}
+		
+
+		img{
+			max-width: 19px;
+			max-height: 16px;
+			filter: brightness(0) invert(1);
+			
+		}
+
+		&:hover{
+			img{
+				filter: none;
+			}
+		}
+	}
+}
