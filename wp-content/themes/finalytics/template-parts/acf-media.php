@@ -9,7 +9,8 @@
 
 ?>
 
-<section class="media <?php if (get_sub_field('media_color_scheme') == 'white'): ?>scheme_white<?php
+<?php $media_custom_id = get_sub_field("media_custom_id"); ?>
+<section <?php if (!empty($media_custom_id)): ?>id="<?php echo $media_custom_id; ?>"<?php endif; ?> class="media <?php if (get_sub_field('media_color_scheme') == 'white'): ?>scheme_white<?php
                             elseif (get_sub_field('media_color_scheme') == 'dark_blue'): ?>scheme_dark-blue<?php endif; ?>">
 
   <div class="container">

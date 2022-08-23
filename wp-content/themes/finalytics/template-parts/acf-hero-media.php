@@ -8,8 +8,9 @@
  */
 
 ?>
-
-<section class="hero-media <?php if( get_sub_field('hero_media_color_scheme') == 'light' ): ?>scheme-light<?php else: ?>scheme-dark<?php endif; ?>">
+<?php $hero_media_custom_id = get_sub_field("hero_media_custom_id"); ?>
+<section <?php if (!empty($hero_media_custom_id)): ?>id="<?php echo $hero_media_custom_id; ?>"<?php endif; ?>
+         class="hero-media <?php if( get_sub_field('hero_media_color_scheme') == 'light' ): ?>scheme-light<?php else: ?>scheme-dark<?php endif; ?>">
   <div class="container-xl">
     <div class="hero-media_holder">
       <div class="row">

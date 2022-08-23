@@ -10,13 +10,15 @@
 ?>
 
 <?php
+$stats_custom_id = get_sub_field("stats_custom_id");
 $stats_item_1_button_name = get_sub_field("stats_item_1_button_name");
 $stats_item_2_button_name = get_sub_field("stats_item_2_button_name");
 $stats_item_3_button_name = get_sub_field("stats_item_3_button_name");
 $stats_item_4_button_name = get_sub_field("stats_item_4_button_name");
 ?>
 
-<section class="stats <?php if (get_sub_field('stats_color_scheme') == 'dark_blue'): ?>scheme_dark-blue<?php
+<section <?php if (!empty($stats_custom_id)): ?>id="<?php echo $stats_custom_id; ?>"<?php endif; ?>
+    class="stats <?php if (get_sub_field('stats_color_scheme') == 'dark_blue'): ?>scheme_dark-blue<?php
                             elseif (get_sub_field('stats_color_scheme') == 'white'): ?>scheme_white<?php
                             elseif (get_sub_field('stats_color_scheme') == 'light_gray'): ?>scheme_light-gray<?php endif; ?>">
 

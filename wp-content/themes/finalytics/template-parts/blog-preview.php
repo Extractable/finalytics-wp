@@ -9,9 +9,10 @@
 
 ?>
 
-
+<?php $blog_preview_custom_id = get_field("blog_preview_custom_id"); ?>
 <?php if (get_field("display_blog_preview")): ?>
-  <section class="blog-preview <?php if (get_field('blog_preview_color_scheme') == 'dark_blue'): ?>scheme_dark-blue<?php
+  <section <?php if (!empty($blog_preview_custom_id)): ?>id="<?php echo $blog_preview_custom_id; ?>"<?php endif; ?>
+      class="blog-preview <?php if (get_field('blog_preview_color_scheme') == 'dark_blue'): ?>scheme_dark-blue<?php
                                 elseif (get_field('blog_preview_color_scheme') == 'white'): ?>scheme_white<?php
                                 elseif (get_field('blog_preview_color_scheme') == 'light_blue'): ?>scheme_light-blue<?php endif; ?>">
     <div class="decor-element"></div>

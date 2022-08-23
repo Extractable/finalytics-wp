@@ -9,7 +9,8 @@
 
 ?>
 
-<section class="media <?php if (get_field('media_color_scheme') == 'white'): ?>scheme_white<?php
+<?php $media_custom_id = get_field("media_custom_id"); ?>
+<section <?php if (!empty($media_custom_id)): ?>id="<?php echo $media_custom_id; ?>"<?php endif; ?> class="media <?php if (get_field('media_color_scheme') == 'white'): ?>scheme_white<?php
                             elseif (get_field('media_color_scheme') == 'dark_blue'): ?>scheme_dark-blue<?php endif; ?>">
 
   <div class="container">
@@ -21,11 +22,10 @@
       if( $media_link ):
         $link_url = $media_link['url'];
         $link_title = $media_link['title'];
-        $link_target = $media_link['target'] ? $media_link['target'] : '_self';
         ?>
 
         <a class="btn btn-link <?php if (get_field('media_color_scheme') == 'white'): ?>btn-link__blue<?php endif; ?>"
-           href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"
+           href="<?php echo esc_url( $link_url ); ?>"
            title="<?php echo esc_html( $link_title ); ?>"><span
               class="btn-link_text"><?php echo esc_html( $link_title ); ?></span></a>
       <?php endif; ?>

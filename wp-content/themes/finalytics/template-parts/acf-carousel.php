@@ -9,7 +9,9 @@
 
 ?>
 
-<section class="carousel-two-col <?php if (get_sub_field('carousel_color_scheme') == 'white'): ?>scheme_white<?php
+<?php $carousel_custom_id = get_sub_field("carousel_custom_id"); ?>
+<section <?php if (!empty($carousel_custom_id)): ?>id="<?php echo $carousel_custom_id; ?>"<?php endif; ?>
+         class="carousel-two-col <?php if (get_sub_field('carousel_color_scheme') == 'white'): ?>scheme_white<?php
                                       elseif (get_sub_field('carousel_color_scheme') == 'dark_blue'): ?>scheme_dark-blue<?php
                                       elseif (get_sub_field('carousel_color_scheme') == 'light_gray'): ?>scheme_light-gray<?php
                                       elseif (get_sub_field('carousel_color_scheme') == 'light_blue'): ?>scheme_light_blue<?php endif; ?>">

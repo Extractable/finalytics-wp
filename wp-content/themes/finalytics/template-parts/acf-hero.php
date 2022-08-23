@@ -9,7 +9,10 @@
 
 ?>
 
-<section class="hero <?php if( get_sub_field('hero_color_scheme') == 'light' ): ?>scheme-light<?php else: ?>scheme-dark<?php endif; ?> <?php if (get_sub_field("hero_display_promo")): ?>show-promo<?php endif; ?>">
+<?php $hero_custom_id = get_sub_field("hero_custom_id"); ?>
+<section <?php if (!empty($hero_custom_id)): ?>id="<?php echo $hero_custom_id; ?>"<?php endif; ?>
+    class="hero <?php if( get_sub_field('hero_color_scheme') == 'light' ): ?>scheme-light<?php
+    else: ?>scheme-dark<?php endif; ?> <?php if (get_sub_field("hero_display_promo")): ?>show-promo<?php endif; ?>">
   <div class="container">
     <div class="hero-wrap">
       <h1 class="h1 hero-title"><?php if (get_sub_field("hero_title")) echo get_sub_field("hero_title"); ?></h1>

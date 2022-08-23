@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying Blog preview section (ACF Flexible content)
+ * Template part for displaying Anchor links bar section (ACF Flexible content)
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -9,12 +9,11 @@
 
 ?>
 
-<?php $blog_preview_custom_id = get_sub_field("blog_preview_custom_id"); ?>
+<?php $anchor_links_custom_id = get_sub_field("anchor_links_custom_id"); ?>
 <?php if (get_sub_field("display_blog_preview")): ?>
-  <section <?php if (!empty($blog_preview_custom_id)): ?>id="<?php echo $blog_preview_custom_id; ?>"<?php endif; ?>
-           class="blog-preview <?php if (get_sub_field('blog_preview_color_scheme') == 'dark_blue'): ?>scheme_dark-blue<?php
-                                    elseif (get_sub_field('blog_preview_color_scheme') == 'white'): ?>scheme_white<?php
-                                    elseif (get_sub_field('blog_preview_color_scheme') == 'light_blue'): ?>scheme_light-blue<?php endif; ?>">
+  <section <?php if (!empty($anchor_links_custom_id)): ?>id="<?php echo $anchor_links_custom_id; ?>"<?php endif; ?> class="blog-preview <?php if (get_sub_field('blog_preview_color_scheme') == 'dark_blue'): ?>scheme_dark-blue<?php
+  elseif (get_sub_field('blog_preview_color_scheme') == 'white'): ?>scheme_white<?php
+  elseif (get_sub_field('blog_preview_color_scheme') == 'light_blue'): ?>scheme_light-blue<?php endif; ?>">
     <div class="decor-element"></div>
 
     <div class="container">
