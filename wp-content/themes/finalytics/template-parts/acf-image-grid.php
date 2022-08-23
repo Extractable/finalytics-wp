@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying Image grid
+ * Template part for displaying Image grid (ACF Flexible content)
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *

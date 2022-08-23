@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying Video section
+ * Template part for displaying Video section (ACF Flexible content)
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *

@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying Statistic section
+ * Template part for displaying Statistic section (ACF Flexible content)
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -25,7 +25,7 @@ $stats_item_4_button_name = get_sub_field("stats_item_4_button_name");
     <p class="stats-text"><?php if (get_sub_field("stats_section_text")) echo get_sub_field("stats_section_text"); ?></p>
     <div class="stats_items">
       <div class="row">
-        <div class="col-sm-3">
+        <div class="col-6 col-lg-3">
           <div class="stats_item">
             <div class="stats_item-icon">
               <?php $stats_item_1_icon = get_sub_field('stats_item_1_icon');
@@ -50,7 +50,7 @@ $stats_item_4_button_name = get_sub_field("stats_item_4_button_name");
             <?php endif; ?>
           </div>
         </div>
-        <div class="col-sm-3">
+        <div class="col-6 col-lg-3">
           <div class="stats_item">
             <div class="stats_item-icon">
               <?php $stats_item_2_icon = get_sub_field('stats_item_2_icon');
@@ -73,7 +73,7 @@ $stats_item_4_button_name = get_sub_field("stats_item_4_button_name");
             <?php endif; ?>
           </div>
         </div>
-        <div class="col-sm-3">
+        <div class="col-6 col-lg-3">
           <div class="stats_item">
             <div class="stats_item-icon">
               <?php $stats_item_3_icon = get_sub_field('stats_item_3_icon');
@@ -96,7 +96,7 @@ $stats_item_4_button_name = get_sub_field("stats_item_4_button_name");
             <?php endif; ?>
           </div>
         </div>
-        <div class="col-sm-3">
+        <div class="col-6 col-lg-3">
           <div class="stats_item">
             <div class="stats_item-icon">
               <?php $stats_item_4_icon = get_sub_field('stats_item_4_icon');

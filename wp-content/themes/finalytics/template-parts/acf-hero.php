@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying Hero banner
+ * Template part for displaying Hero banner (ACF Flexible content)
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *

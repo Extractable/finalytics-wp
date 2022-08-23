@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying Image with text section
+ * Template part for displaying Image with text section (ACF Flexible content)
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -16,7 +16,7 @@
                                       endif; ?> <?php if (get_sub_field('img_w_t_image_position') == 'right'): ?>image-right<?php else: ?>image-left<?php endif; ?>">
   <div class="container iwt-wrapper">
     <div class="row">
-      <div class="col-sm-7">
+      <div class="col-md-6 col-lg-7">
         <div class="iwt__image">
           <span class="h4 iwt__image-title"><?php if (get_sub_field("img_w_t_image_description_title")) echo get_sub_field("img_w_t_image_description_title"); ?></span>
           <p class="iwt__image-text"><?php if (get_sub_field("img_w_t_image_description_text")) echo get_sub_field("img_w_t_image_description_text"); ?></p>
@@ -35,7 +35,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-5">
+      <div class="col-md-6 col-lg-5">
         <div class="iwt__text">
           <?php $img_w_t_eyebrow = get_sub_field("img_w_t_eyebrow");
           if (!empty($img_w_t_eyebrow)): ?>

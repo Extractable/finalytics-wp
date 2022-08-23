@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying Blog preview section
+ * Template part for displaying Blog preview section (ACF Flexible content)
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -12,8 +12,8 @@
 
 <?php if (get_sub_field("display_blog_preview")): ?>
   <section class="blog-preview <?php if (get_sub_field('blog_preview_color_scheme') == 'dark_blue'): ?>scheme_dark-blue<?php
-                                elseif (get_sub_field('blog_preview_color_scheme') == 'white'): ?>scheme_white<?php
-                                elseif (get_sub_field('blog_preview_color_scheme') == 'light_blue'): ?>scheme_light-blue<?php endif; ?>">
+  elseif (get_sub_field('blog_preview_color_scheme') == 'white'): ?>scheme_white<?php
+  elseif (get_sub_field('blog_preview_color_scheme') == 'light_blue'): ?>scheme_light-blue<?php endif; ?>">
     <div class="decor-element"></div>
 
     <div class="container">
@@ -28,7 +28,7 @@
 
                 // Setup this post for WP functions (variable must be named $post).
                 setup_postdata($post); ?>
-                <div class="col-sm-4">
+                <div class="col-md-4">
                   <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="blog-preview_item-link">
                     <div class="blog-preview_item-thumb"><?php the_post_thumbnail(); ?></div>
                     <div class="blog-preview_item-content">
@@ -45,6 +45,7 @@
             wp_reset_postdata(); ?>
           <?php endif; ?>
         </div>
+
         <?php
         $blog_preview_link = get_sub_field('blog_preview_link');
         if( $blog_preview_link ):
@@ -52,13 +53,15 @@
           $link_title = $blog_preview_link['title'];
           $link_target = $blog_preview_link['target'] ? $blog_preview_link['target'] : '_self';
           ?>
-
-          <a class="btn btn-link <?php if (get_sub_field('blog_preview_color_scheme') == 'light_blue'): ?>btn-link__blue<?php
-          elseif (get_sub_field('blog_preview_color_scheme') == 'white'): ?>btn-link__blue<?php endif; ?>"
-             href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"
-             title="<?php echo esc_html( $link_title ); ?>"><span
-                class="btn-link_text"><?php echo esc_html( $link_title ); ?></span></a>
+          <div class="blog-preview_cta">
+            <a class="btn btn-link <?php if (get_sub_field('blog_preview_color_scheme') == 'light_blue'): ?>btn-link__blue<?php
+            elseif (get_sub_field('blog_preview_color_scheme') == 'white'): ?>btn-link__blue<?php endif; ?>"
+               href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"
+               title="<?php echo esc_html( $link_title ); ?>"><span
+                  class="btn-link_text"><?php echo esc_html( $link_title ); ?></span></a>
+          </div>
         <?php endif; ?>
+
       </div>
     </div>
 

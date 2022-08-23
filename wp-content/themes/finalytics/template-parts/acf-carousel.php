@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying Carousel two-columns section
+ * Template part for displaying Carousel two-columns section (ACF Flexible content)
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -21,7 +21,7 @@
         <?php while( have_rows('carousel_items') ): the_row(); ?>
           <li class="carousel-two-col__slide <?php if (get_sub_field('carousel_item_image_position') == 'right'): ?>image-right<?php else: ?>image-left<?php endif; ?>">
             <div class="row no-gutters">
-              <div class="col-sm-6">
+              <div class="col-12 col-md-6">
 
                 <div class="carousel-two-col__slide-media">
                   <?php if (get_sub_field('carousel_item_image_or_video') == 'video'): ?>
@@ -38,7 +38,7 @@
                 </div>
 
               </div>
-              <div class="col-sm-6">
+              <div class="col-12 col-md-6">
                 <div class="carousel-two-col__slide-content">
                   <a href="<?php if (get_sub_field("carousel_item_eyebrow_url")) echo get_sub_field("carousel_item_eyebrow_url"); ?>"
                      class="carousel-two-col__slide-eyebrow" title="<?php if (get_sub_field("carousel_item_eyebrow")) echo get_sub_field("carousel_item_eyebrow"); ?>">
