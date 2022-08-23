@@ -2,10 +2,10 @@
   display: flex;
   align-items: center;
   position: relative;
-  padding: 120px 0 45px;
+  padding: 121px 0 62px;
   @include media-breakpoint-up(md){
     height: 714px;
-    padding: 0;
+    padding: 130px 0 67px;
   }
   &:before {
     content: "";
@@ -29,13 +29,7 @@
     padding: 153px 0 45px;
     @include media-breakpoint-up(md){
       height: 925px;
-      padding: 0;
-    }
-    .hero-wrap {
-      @include media-breakpoint-up(md){
-        margin-top: -144px;
-      }
-      padding-top: 0;
+      padding: 130px 0 277px;
     }
     &:after {
       height: 320px;
@@ -54,11 +48,6 @@
     text-align: center;
     position: relative;
     z-index: 2;
-    margin-bottom: 95px;
-    @include media-breakpoint-up(md) {
-      padding-top: 65px;
-      margin-bottom: 0;
-    }
     .btn {
       margin-top: 40px;
     }
@@ -77,14 +66,14 @@
     max-width: 300px;
     padding: 22px;
     z-index: 2;
-    margin: 0 auto;
+    margin: 96px auto 0;
     border: 1px solid;
     border-radius: $border-radius;
     position: relative;
     text-align: center;
     @include media-breakpoint-up(md){
       max-width: 700px;
-      margin-left: -350px;
+      margin: 0 0 0 -350px;
       padding: 25px 35px;
       bottom: 73px;
       width: 100%;
@@ -96,12 +85,12 @@
     }
     @include media-breakpoint-up(lg){
       max-width: 880px;
-      margin-left: -440px;
+      margin: 0 0 0 -440px;
       padding: 32px 60px;
     }
     @include media-breakpoint-up(xl){
       max-width: 1012px;
-      margin-left: -506px;
+      margin: 0 0 0 -506px;
       padding: 32px 100px;
     }
   }
@@ -112,6 +101,9 @@
     }
     @include media-breakpoint-up(lg){
       margin: 0 22px 0 0;
+    }
+    @include media-breakpoint-up(xl){
+      margin: 0 50px 0 0;
     }
   }
   .hero_promo__image {

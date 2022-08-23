@@ -28,6 +28,9 @@ get_header();
 						if( get_row_layout() == 'section_hero' ):
 							get_template_part( 'template-parts/acf-hero' );
 
+            elseif( get_row_layout() == 'section_hero_media' ):
+                get_template_part( 'template-parts/acf-hero-media' );
+
 						elseif( get_row_layout() == 'section_img_text' ):
 							get_template_part( 'template-parts/acf-img-with-text' );
 

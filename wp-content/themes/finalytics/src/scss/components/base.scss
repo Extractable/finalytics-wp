@@ -7,9 +7,15 @@ body {
   font-size: $fs-rg;
   line-height: $lh;
   color: $black;
-
   @include media-breakpoint-up(md) {
     font-size: $fs-md;
+  }
+  .container-xl {
+    max-width: 100%;
+    @include media-breakpoint-up(xl){
+      max-width: 1320px;
+      margin: 0 auto;
+    }
   }
 }
 .container {
@@ -17,14 +23,6 @@ body {
   @include media-breakpoint-up(xl){
     max-width: 1220px;
     margin: 0 auto;
-  }
-}
-.site-header {
-  .container {
-    max-width: 100%;
-    @include media-breakpoint-up(xl){
-      max-width: 1320px;
-    }
   }
 }
 .container-fluid {
@@ -109,6 +107,7 @@ body {
     padding: 0;
     width: auto;
     height: auto;
+    max-width: 100%;
     display: inline-block;
     border-radius: 0;
     @include media-breakpoint-up(lg){
@@ -118,7 +117,7 @@ body {
       text-decoration: none;
       .btn-link_text {
         &:after {
-          right: -5px;
+          right: -4px;
         }
       }
     }
@@ -139,6 +138,8 @@ body {
         @include media-breakpoint-up(lg){
           height: 24px;
           width: 26px;
+          top: -2px;
+          right: -1px;
         }
       }
     }
