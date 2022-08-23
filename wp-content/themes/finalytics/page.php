@@ -15,24 +15,52 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+<div id="primary" class="content-area">
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+	<main class="main-content">
+		<!-- Section Repeater -->
+		<?php if ( have_rows('section_repeater') ) : ?>
+			<?php while( have_rows('section_repeater') ): the_row(); ?>
+				<!-- Modules Repeater -->
+				<?php if( have_rows('flexible_modules') ):
+					while ( have_rows('flexible_modules') ) : the_row();
+						
+						if( get_row_layout() == 'section_hero' ):
+							get_template_part( 'template-parts/acf-hero' );
 
-			get_template_part( 'template-parts/content', 'page' );
+						elseif( get_row_layout() == 'section_img_text' ):
+							get_template_part( 'template-parts/acf-img-with-text' );
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+						elseif( get_row_layout() == 'section_stats' ):
+							get_template_part( 'template-parts/acf-stats' );
 
-		endwhile; // End of the loop.
-		?>
+						elseif( get_row_layout() == 'section_video' ):
+							get_template_part( 'template-parts/acf-video' );
+						
+						elseif( get_row_layout() == 'section_carousel' ):
+							get_template_part( 'template-parts/acf-carousel' );
+
+						elseif( get_row_layout() == 'section_image_grid' ):
+							get_template_part( 'template-parts/acf-image-grid' );
+
+						elseif( get_row_layout() == 'section_media' ):
+							get_template_part( 'template-parts/acf-media' );
+
+						elseif( get_row_layout() == 'section_blog_preview' ):
+							get_template_part( 'template-parts/acf-blog-preview' );
+
+						endif;
+
+					endwhile;
+				endif; ?>
+
+			<?php endwhile; ?>
+		<?php endif; ?>
 
 	</main><!-- #main -->
 
+</div>
+
 <?php
-get_sidebar();
-get_footer();
+get_footer(); ?>
+
