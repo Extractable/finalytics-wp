@@ -58,6 +58,9 @@ get_header();
             elseif( get_row_layout() == 'section_use_cases' ):
               get_template_part( 'template-parts/acf-use-cases' );
 
+            elseif( get_row_layout() == 'section_promo_callout' ):
+              get_template_part( 'template-parts/acf-promo-callout' );
+
 						endif;
 
 					endwhile;

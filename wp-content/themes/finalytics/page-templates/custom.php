@@ -14,7 +14,8 @@ get_header(); ?>
       get_template_part('template-parts/video');
       get_template_part('template-parts/image-grid');
       get_template_part('template-parts/media');
-      get_template_part('template-parts/blog-preview'); ?>
+      get_template_part('template-parts/blog-preview');
+      get_template_part('template-parts/promo-callout'); ?>
     <?php
         //Homepage content
         while (have_posts()) : the_post(); ?>

@@ -41,6 +41,7 @@
             </div>
           <?php endwhile; ?>
         <?php endif; ?>
+        <?php wp_reset_query();	 // Restore global post data stomped by the_post(). ?>
       </div>
     </div>
   </div>
