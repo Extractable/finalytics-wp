@@ -52,6 +52,9 @@ get_header();
 						elseif( get_row_layout() == 'section_blog_preview' ):
 							get_template_part( 'template-parts/acf-blog-preview' );
 
+            elseif( get_row_layout() == 'section_anchor_bar' ):
+              get_template_part( 'template-parts/acf-anchor-bar' );
+
 						endif;
 
 					endwhile;

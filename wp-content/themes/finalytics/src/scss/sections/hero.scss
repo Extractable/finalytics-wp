@@ -3,6 +3,7 @@
   align-items: center;
   position: relative;
   padding: 121px 0 62px;
+  overflow: hidden;
   @include media-breakpoint-up(md){
     height: 714px;
     padding: 130px 0 67px;
