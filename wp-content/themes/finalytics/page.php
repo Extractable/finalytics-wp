@@ -55,6 +55,9 @@ get_header();
             elseif( get_row_layout() == 'section_anchor_bar' ):
               get_template_part( 'template-parts/acf-anchor-bar' );
 
+            elseif( get_row_layout() == 'section_use_cases' ):
+              get_template_part( 'template-parts/acf-use-cases' );
+
 						endif;
 
 					endwhile;

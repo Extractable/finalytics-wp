@@ -131,9 +131,10 @@ function finalytics_widgets_init() {
 			'after_title'   => '</h3>',
 		)
 	);
-  //Custom widget zones
 
-  //Header right widget zone
+  /**
+   * Header right widget zone
+   */
 
   register_sidebar( array(
     'name' => esc_html__( 'Header', 'finalytics' ),
@@ -145,9 +146,15 @@ function finalytics_widgets_init() {
     'after_title' => '</h3>',
   ) );
 
-  /////////Footer widget zones/////////
+  /**
+   *
+   * Footer widget zones
+   *
+   */
 
-  /// Footer widget zone 1
+  /**
+   * Footer widget zone 1
+   */
 
   register_sidebar( array(
     'name' => esc_html__( 'Footer zone 1', 'finalytics' ),
@@ -159,7 +166,9 @@ function finalytics_widgets_init() {
     'after_title' => '</h3>',
   ) );
 
-  /// Footer widget zone 2
+  /**
+   * Footer widget zone 2
+   */
 
   register_sidebar( array(
     'name' => esc_html__( 'Footer zone 2. Info column', 'finalytics' ),
@@ -171,7 +180,9 @@ function finalytics_widgets_init() {
     'after_title' => '</h3>',
   ) );
 
-  /// Footer widget zone 3
+  /**
+   * Footer widget zone 3
+   */
 
   register_sidebar( array(
     'name' => esc_html__( 'Footer zone 3. Info column', 'finalytics' ),
@@ -183,7 +194,9 @@ function finalytics_widgets_init() {
     'after_title' => '</h3>',
   ) );
 
-  /// Footer widget zone 4
+  /**
+   * Footer widget zone 4
+   */
 
   register_sidebar( array(
     'name' => esc_html__( 'Footer zone 4. Info column', 'finalytics' ),
@@ -195,7 +208,9 @@ function finalytics_widgets_init() {
     'after_title' => '</h3>',
   ) );
 
-  /// Footer widget zone 5
+  /**
+   * Footer widget zone 5
+   */
 
   register_sidebar( array(
     'name' => esc_html__( 'Footer zone 5. Info column', 'finalytics' ),
@@ -207,7 +222,9 @@ function finalytics_widgets_init() {
     'after_title' => '</h3>',
   ) );
 
-  /// Footer copyright zone
+  /**
+   * Footer copyright zone
+   */
 
   register_sidebar( array(
     'name' => esc_html__( 'Footer copyright zone', 'finalytics' ),
