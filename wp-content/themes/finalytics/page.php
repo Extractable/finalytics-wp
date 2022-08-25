@@ -61,6 +61,12 @@ get_header();
             elseif( get_row_layout() == 'section_promo_callout' ):
               get_template_part( 'template-parts/acf-promo-callout' );
 
+            elseif( get_row_layout() == 'section_promo_offset' ):
+              get_template_part( 'template-parts/acf-promo-offset' );
+
+            elseif( get_row_layout() == 'section_quote' ):
+              get_template_part( 'template-parts/acf-quote' );
+
 						endif;
 
 					endwhile;

@@ -1,0 +1,109 @@
+.promo-offset {
+  padding: 20px 0;
+  @include media-breakpoint-up(xl) {
+    padding: 20px 0 155px;
+  }
+  &.scheme_light_blue {
+    .promo-offset_content {
+      background: $bg-color;
+    }
+    .promo-offset_title {
+      color: $mainColor;
+    }
+    .promo-offset_text {
+      color: $blue-gray;
+    }
+    .promo-offset_holder {
+      background: $bg-color;
+      @include media-breakpoint-up(xl) {
+        background: transparent;
+        &:before {
+          background: $bg-color;
+        }
+      }
+    }
+  }
+  &.scheme_dark-blue {
+    .promo-offset_content {
+      background: $mainColor;
+    }
+    .promo-offset_title {
+      color: $white;
+    }
+    .promo-offset_text {
+      color: $gray;
+    }
+    .promo-offset_holder {
+      background: $mainColor;
+      @include media-breakpoint-up(xl) {
+        background: transparent;
+        &:before {
+          background: $mainColor;
+        }
+      }
+    }
+  }
+}
+.promo-offset_holder {
+  position: relative;
+  padding: 60px 0;
+  @include media-breakpoint-up(xl) {
+    padding: 0;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 50%;
+    }
+  }
+}
+.promo-offset_wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+    align-items: center;
+  }
+  @include media-breakpoint-up(xl) {
+    display: block;
+  }
+}
+.promo-offset_content {
+  border-radius: $border-radius;
+  @include media-breakpoint-up(xl) {
+    width: 1063px;
+    padding: 123px 600px 123px 0;
+  }
+}
+.promo-offset_title {
+  margin-bottom: 20px;
+  @include media-breakpoint-up(xl) {
+    margin-bottom: 40px;
+  }
+}
+p.promo-offset_text {
+  font-weight: $fw-medium;
+  line-height: 1.4;
+  margin-bottom: 21px;
+}
+.promo-offset_image {
+  margin: 0 0 32px;
+  text-align: center;
+  @include media-breakpoint-up(md) {
+    margin: 0 0 0 32px;
+  }
+  @include media-breakpoint-up(xl) {
+    margin: 0;
+    position: absolute;
+    top: 109px;
+    right: 0;
+  }
+  img {
+    border-radius: $border-radius;
+    max-width: 100%;
+    height: auto;
+  }
+}
