@@ -1,0 +1,109 @@
+.site-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	align-items: center;
+	transition: background-color ease-out $transition;
+	z-index: 999;
+	@include media-breakpoint-up(xl){
+		min-height: 100px;
+	}
+	&.active{
+		background-color: rgba(8, 16, 42, .75);
+		top: 0;
+		&.scheme-light {
+			background-color: rgba(255, 255, 255, .75);
+		}
+	}
+}
+.site-header {
+	padding: 20px 0;
+	@include media-breakpoint-up(xl){
+		padding: 49px 0;
+	}
+	[class*='col'] {
+		position: static;
+		@include media-breakpoint-up(xl) {
+			position: relative;
+		}
+	}
+	&.scheme-dark {
+
+	}
+	&.scheme-light {
+		color: $mainColor;
+		.btn {
+			&.btn-secondary {
+				color: $blue;
+				background: rgba(9, 71, 181, .08);
+
+				&:hover {
+					background: rgba(9, 71, 181, .2);
+				}
+			}
+		}
+	}
+}
+.site-branding {
+	display: flex;
+	max-width: 117px;
+	@include media-breakpoint-up(md){
+		max-width: 156px;
+	}
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+.header-sidebar {
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: column-reverse;
+	.widget_block {
+		margin-bottom: 23px;
+		@include media-breakpoint-up(xl){
+			margin-bottom: 0;
+			margin-top: -4px;
+		}
+	}
+	@include media-breakpoint-up(xl){
+		flex-direction: row;
+	}
+	.btn.btn-secondary {
+		display: none;
+		@include media-breakpoint-up(xl){
+			margin-left: 17px;
+			display: block;
+		}
+	}
+	.btn.btn-primary {
+		display: block;
+		margin: 0 auto;
+		width: 90%;
+		max-width: 400px;
+		@include media-breakpoint-up(xl){
+			display: none;
+		}
+	}
+	.menu {
+		justify-content: space-around;
+		@include media-breakpoint-up(xl){
+			justify-content: unset;
+		}
+		li {
+			a {
+				font-size: $fs-rg;
+				@include media-breakpoint-up(xl){
+					font-size: $fs-sm;
+				}
+			}
+		}
+	}
+	.widget {
+		@include media-breakpoint-up(xl){
+			margin-bottom: 0;
+		}
+	}
+}

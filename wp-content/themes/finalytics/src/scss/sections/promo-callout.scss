@@ -1,0 +1,128 @@
+.promo-callout {
+  position: relative;
+  padding: 42px 0 63px;
+  @include media-breakpoint-up(md){
+    padding: 70px 0;
+  }
+  @include media-breakpoint-up(lg){
+    padding: 140px 0;
+  }
+  .row  {
+    [class*='col'] {
+      @include media-breakpoint-down(sm){
+        margin-bottom: 20px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .promo-callout_heading {
+    text-align: center;
+    margin-bottom: 40px;
+    @include media-breakpoint-up(lg){
+      margin-bottom: 108px;
+    }
+  }
+  .promo-callout_wrapper {
+    position: relative;
+    z-index: 1;
+  }
+  .promo-callout_image {
+    padding: 8px;
+    border-radius: $border-radius;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 713px;
+    @include media-breakpoint-up(md) {
+      padding: 32px;
+      margin: 0;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .promo-callout_content-wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .promo-callout_title {
+    line-height: 1.3;
+    font-weight: $fw-bold;
+    margin-bottom: 22px;
+  }
+  .promo-callout_text {
+    font-weight: $fw-medium;
+    line-height: 1.4;
+  }
+  .promo-callout_cta {
+    margin-top: 23px;
+    @include media-breakpoint-up(md) {
+      margin-top: 25px;
+    }
+    .btn + .btn {
+      margin: 20px 0 0 0;
+      display: block;
+      @include media-breakpoint-up(xl) {
+        margin: 0 0 0 20px;
+        display: inline-block;
+      }
+    }
+  }
+  &.image-right {
+    .row {
+      flex-direction: row-reverse;
+    }
+  }
+  .decor-element {
+    display: none;
+    position: absolute;
+    width: 977px;
+    height: 661px;
+    left: -409px;
+    top: 188px;
+    background: $blue-light;
+    opacity: 0.46;
+    filter: blur(295.622px);
+  }
+  &.scheme_white {
+    background: $white url("../img/promo-split-bg.svg") no-repeat top left / contain;
+    color: $blue-gray;
+    @include media-breakpoint-up(lg) {
+      background: url("../img/promo-split-bg.svg") no-repeat top right, url("../img/promo-split-bg.svg") no-repeat left bottom;
+      background-color: $white;
+    }
+    .promo-callout_heading {
+      color: $mainColor;
+    }
+    .promo-callout_image {
+      background: $gray2;
+      img {
+        box-shadow: 0px 31.1663px 40.071px rgba(7, 14, 39, 0.05);
+      }
+    }
+    .promo-callout_content {
+      background: $white;
+    }
+    .promo-callout_title {
+      color: $mainColor;
+    }
+  }
+  &.scheme_dark-blue {
+    background: $dark-blue;
+    .decor-element {
+      display: block;
+    }
+    .promo-callout_image {
+      background: $black;
+    }
+    .promo-callout_text {
+      color: $gray;
+    }
+    .promo-callout_title {
+      color: $white;
+    }
+  }
+}

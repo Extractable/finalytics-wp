@@ -1,0 +1,34 @@
+.acf-social-list {
+	display: flex;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.acf-social-item {
+	margin-right: 15px;
+	&:last-child {
+		margin-right: 0;
+	}
+}
+.acf-social-link {
+	height: 32px;
+	width: 32px;
+	filter: invert(93%) sepia(0%) saturate(7469%) hue-rotate(109deg) brightness(107%) contrast(107%);
+	transition: filter 500ms linear;
+	span {
+		display: none;
+	}
+	&.acf-social-fb {
+		background: url("../img/acf-social/facebook.svg") no-repeat;
+	}
+	&.acf-social-tw {
+		background: url("../img/acf-social/twitter.svg") no-repeat;
+	}
+	&.acf-social-lk {
+		background: url("../img/acf-social/linkedin.svg") no-repeat;
+	}
+	&:hover {
+		filter: invert(81%) sepia(67%) saturate(430%) hue-rotate(111deg) brightness(93%) contrast(95%);
+
+	}
+}

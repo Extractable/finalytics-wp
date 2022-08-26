@@ -1,0 +1,110 @@
+.image-grid {
+  padding: 30px 0 40px;
+  @include media-breakpoint-up(md) {
+    padding: 50px 0 70px;
+  }
+  @include media-breakpoint-up(lg) {
+    padding: 70px 0 90px;
+  }
+  &.scheme_white {
+    color: $blue-gray;
+    .image-grid_title {
+      color: $mainColor;
+    }
+    .image-grid_item-link {
+      color: $blue-gray;
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+  &.scheme_dark-blue {
+    background: $mainColor;
+    color: $gray;
+    .image-grid_title {
+      color: $white;
+    }
+    .image-grid_item-link {
+      color: $gray;
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+}
+.image-grid_items {
+  .row {
+    justify-content: center;
+    @include media-breakpoint-up(md) {
+      justify-content: flex-start;
+    }
+  }
+  .col {
+    width: 50%;
+    flex: 0 0 50%;
+    @include media-breakpoint-up(md) {
+      width: 20%;
+      flex: 0 0 20%;
+    }
+  }
+}
+.image-grid_title {
+  margin-bottom: 17px;
+}
+p.image-grid_text {
+  font-size: $fs-md;
+  font-weight: $fw-medium;
+  margin-bottom: 24px;
+  line-height: 1.5;
+  @include media-breakpoint-up(md) {
+    margin-bottom: 15px;
+  }
+}
+.image-grid_cta {
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  @include media-breakpoint-up(md) {
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+  .btn.btn-link {
+    margin-bottom: 22px;
+    white-space: normal;
+    text-align: left;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 32px;
+    }
+    @include media-breakpoint-up(lg) {
+      white-space: nowrap;
+      max-width: none;
+    }
+  }
+}
+.image-grid_info {
+  margin-bottom: 22px;
+  @include media-breakpoint-up(md) {
+    margin-bottom: 30px;
+  }
+}
+.image-grid_item {
+  text-align: center;
+}
+.image-grid_item-link {
+  text-decoration: none;
+  transition: color ease 0.3s;
+}
+.image-grid_item-img {
+  display: block;
+  margin: 0 auto 20px;
+  max-width: 100%;
+  height: auto;
+}
+p.image-grid_item-descr {
+  font-size: $fs-md;
+  font-weight: $fw-medium;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  padding: 0 10px;
+}

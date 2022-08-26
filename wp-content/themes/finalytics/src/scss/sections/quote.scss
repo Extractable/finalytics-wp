@@ -1,0 +1,117 @@
+.quote {
+  padding: 120px 0 60px;
+  position: relative;
+  @include media-breakpoint-up(md){
+    padding: 130px 0;
+  }
+  &.scheme_white {
+    background: $white url("../img/promo-split-bg.svg") no-repeat top right / contain;
+    .quote_text {
+      color: $deep-blue;
+      &:before {
+        filter: invert(23%) sepia(95%) saturate(2014%) hue-rotate(211deg) brightness(78%) contrast(104%);
+      }
+    }
+    .quote_author-name {
+      color: $deep-blue;
+    }
+    .quote_author-position {
+      color: $blue-gray;
+    }
+  }
+  &.scheme_dark-blue {
+    background: $mainColor;
+    .quote_text {
+      color: $white;
+      &:before {
+        filter: invert(81%) sepia(67%) saturate(430%) hue-rotate(111deg) brightness(93%) contrast(95%);
+      }
+    }
+    .quote_author-name {
+      color: $white;
+    }
+    .quote_author-position {
+      color: $gray;
+    }
+    .decor-element {
+      display: block;
+    }
+  }
+}
+.quote_text {
+  font-family: $ff-title;
+  font-size: 26px;
+  line-height: 1.3;
+  text-align: center;
+  letter-spacing: 0.1px;
+  margin-bottom: 37px;
+  position: relative;
+  z-index: 1;
+  @include media-breakpoint-up(md){
+    font-size: 33px;
+  }
+  @include media-breakpoint-up(lg){
+    font-size: 40px;
+  }
+  &:before {
+    content: "";
+    height: 33px;
+    width: 28px;
+    background: url("../img/quote-left.svg") no-repeat 0 0 / contain;
+    position: absolute;
+    top: -62px;
+    left: 50%;
+    margin-left: -14px;
+    @include media-breakpoint-up(md){
+      height: 36px;
+      width: 40px;
+      margin-left: -20px;
+    }
+  }
+}
+.quote_photo {
+  margin-right: 15px;
+  img {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+  }
+}
+.quote_author {
+  display: flex;
+  font-style: normal;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+.quote_author-name {
+  font-weight: $fw-semibold;
+  font-size: $fs-rg;
+  line-height: 1.3;
+  display: block;
+  margin-bottom: 4px;
+}
+.quote_author-position {
+  font-weight: $fw-semibold;
+  font-size: $fs-sm;
+  line-height: 1.2;
+  display: block;
+}
+.decor-element {
+  position: absolute;
+  width: 357.92px;
+  height: 278px;
+  opacity: 0.7;
+  filter: blur(175.14px);
+  background: $blue-light;
+  display: none;
+  z-index: 0;
+  right: 0;
+  bottom: 0;
+  @include media-breakpoint-up(md){
+    width: 557.92px;
+    height: 378px;
+    bottom: -50px;
+    filter: blur(250.14px);
+  }
+}

@@ -1,0 +1,43 @@
+// Plugins/Libs.
+@import '../../node_modules/bootstrap/scss/bootstrap';
+@import 'components/fancybox.scss';
+@import 'components/slick-theme.scss';
+@import 'components/slick.scss';
+@import 'components/aos.scss';
+
+
+// Theme components.
+@import 'components/fonts';
+@import 'components/vars';
+@import 'components/typography';
+
+
+// Theme base styles.
+@import 'components/base';
+
+// Theme common styles.
+@import 'common/menu';
+@import 'common/acf-social-widget';
+@import 'common/social';
+@import 'common/header';
+@import 'common/footer';
+
+@import 'sections/hero';
+@import 'sections/hero-media';
+@import 'sections/img-with-text';
+@import 'sections/carousel';
+@import 'sections/stats';
+@import 'sections/video';
+@import 'sections/image-grid';
+@import 'sections/media';
+@import 'sections/blog-preview';
+@import 'sections/anchor-bar';
+@import 'sections/use-cases';
+@import 'sections/promo-callout';
+@import 'sections/promo-offset';
+@import 'sections/quote';
+
+
+
+// Other styles. Please headline each group of your custom styles, for example:
+// ACF Flexible content styles.
