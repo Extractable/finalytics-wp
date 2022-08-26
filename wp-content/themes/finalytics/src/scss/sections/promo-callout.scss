@@ -62,13 +62,12 @@
     @include media-breakpoint-up(md) {
       margin-top: 25px;
     }
+    .btn {
+      display: block;
+      text-align: left;
+    }
     .btn + .btn {
       margin: 20px 0 0 0;
-      display: block;
-      @include media-breakpoint-up(xl) {
-        margin: 0 0 0 20px;
-        display: inline-block;
-      }
     }
   }
   &.image-right {

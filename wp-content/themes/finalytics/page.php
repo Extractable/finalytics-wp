@@ -67,6 +67,9 @@ get_header();
             elseif( get_row_layout() == 'section_quote' ):
               get_template_part( 'template-parts/acf-quote' );
 
+            elseif( get_row_layout() == 'section_beaf_slider' ):
+              get_template_part( 'template-parts/acf-beaf-slider' );
+
 						endif;
 
 					endwhile;

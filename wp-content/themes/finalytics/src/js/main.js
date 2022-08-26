@@ -1,6 +1,7 @@
 /**
  * Plugins/Libs.
  */
+//= ../../node_modules/bootstrap/dist/js/bootstrap.js
 //= ../../node_modules/object-fit-images/dist/ofi.js
 //= ../../node_modules/body-scroll-lock/lib/bodyScrollLock.min.js
 //= ../../node_modules/slick-carousel/slick/slick.min.js
@@ -57,6 +58,13 @@ document.addEventListener('DOMContentLoaded', function(){
 			});
 		});
 
+		$.fn.BeerSlider = function ( options ) {
+			options = options || {};
+			return this.each(function() {
+				new BeerSlider(this, options);
+			});
+		};
+		$('.beer-slider').BeerSlider({start: 50});
 	})( jQuery );
 
 });

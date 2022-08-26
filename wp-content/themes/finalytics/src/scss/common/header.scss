@@ -11,10 +11,12 @@
 		min-height: 100px;
 	}
 	&.active{
-		background-color: rgba(8, 16, 42, .75);
 		top: 0;
 		&.scheme-light {
 			background-color: rgba(255, 255, 255, .75);
+		}
+		&.scheme-dark {
+			background-color: rgba(8, 16, 42, .75);
 		}
 	}
 }

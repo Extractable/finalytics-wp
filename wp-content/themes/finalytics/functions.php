@@ -243,10 +243,12 @@ add_action( 'widgets_init', 'finalytics_widgets_init' );
  */
 function finalytics_scripts() {
   // Styles
-  wp_enqueue_style( 'finalytics-style', get_stylesheet_uri(), array(), finalytics_VERSION );
+  wp_enqueue_style('finalytics-beerslider', get_template_directory_uri() . '/css/beer-slider/BeerSlider.css', [], finalytics_VERSION, 'all');
+  wp_enqueue_style('finalytics-style', get_stylesheet_uri(), array(), finalytics_VERSION );
   wp_enqueue_style('finalytics-style-main', get_template_directory_uri() . '/static/css/main.min.css', [], finalytics_VERSION, 'all');
 
   //JS
+	wp_enqueue_script( 'finalytics-beerslider', get_template_directory_uri() . '/js/beer-slider/BeerSlider.js', array(), finalytics_VERSION, true );
 	wp_enqueue_script( 'finalytics-navigation', get_template_directory_uri() . '/js/navigation.js', array(), finalytics_VERSION, true );
   wp_enqueue_script('scripts', get_template_directory_uri() . '/static/js/main.min.js', ['jquery'], finalytics_VERSION, true);
 

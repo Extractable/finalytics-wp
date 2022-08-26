@@ -6,6 +6,9 @@
   }
   &.scheme_white {
     background: $white url("../img/promo-split-bg.svg") no-repeat top right / contain;
+    @include media-breakpoint-up(md){
+      background-size: auto;
+    }
     .quote_text {
       color: $deep-blue;
       &:before {

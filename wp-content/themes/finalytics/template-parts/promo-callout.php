@@ -18,7 +18,7 @@
          endif; ?> <?php if (get_field('promo_callout_image_position') == 'right'): ?>image-right<?php else: ?>image-left<?php endif; ?>">
   <div class="promo-callout_wrapper">
     <div class="container">
-      <h2 class="h2 promo-callout_heading"><?php if (get_field("promo_callout_heading")) echo get_field("promo_callout_heading"); ?></h2>
+      <?php if (get_field("promo_callout_heading")): ?><h2 class="h2 promo-callout_heading"><?php echo get_field("promo_callout_heading"); ?></h2><?php endif; ?>
       <div class="row">
         <div class="col-md-6 col-lg-8">
           <div class="promo-callout_image">
