@@ -296,7 +296,7 @@ if ( ! class_exists( 'ACF' ) ) :
 			acf_include( 'includes/locations/class-acf-location-page.php' );
 			acf_include( 'includes/locations/class-acf-location-current-user.php' );
 			acf_include( 'includes/locations/class-acf-location-current-user-role.php' );
-			acf_include( 'includes/locations/class-acf-location-user-form.php' );
+			acf_include( 'includes/locations/class-acf-location-user-request-form.php' );
 			acf_include( 'includes/locations/class-acf-location-user-role.php' );
 			acf_include( 'includes/locations/class-acf-location-taxonomy.php' );
 			acf_include( 'includes/locations/class-acf-location-attachment.php' );
