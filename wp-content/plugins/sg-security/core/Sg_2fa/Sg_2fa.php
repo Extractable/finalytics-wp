@@ -649,7 +649,7 @@ class Sg_2fa {
 		$this->load_form(
 			array(
 				'action'   => esc_url( add_query_arg( 'action', 'sgs2fa', wp_login_url() ) ),
-				'template' => '2fa-initial-setup-form.php',
+				'template' => '2fa-initial-setup-request-form.php',
 				'error'    => '',
 				'qr'       => get_user_meta( $user->ID, 'sg_security_2fa_qr', true ), // phpcs:ignore
 				'secret'   => get_user_meta( $user->ID, 'sg_security_2fa_secret', true ), // phpcs:ignore
@@ -743,7 +743,7 @@ class Sg_2fa {
 			if ( 0 == get_user_meta( $cookie_data[0], 'sg_security_2fa_configured', true ) ) { // phpcs:ignore
 				// Arguments for initial 2fa setup.
 				$args = array_merge( $args, array(
-					'template' => '2fa-initial-setup-form.php',
+					'template' => '2fa-initial-setup-request-form.php',
 					'qr'       => get_user_meta( $cookie_data[0], 'sg_security_2fa_qr', true ), // phpcs:ignore
 					'secret'   => get_user_meta( $cookie_data[0], 'sg_security_2fa_secret', true ), // phpcs:ignore
 				) );

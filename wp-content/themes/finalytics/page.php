@@ -70,6 +70,9 @@ get_header();
             elseif( get_row_layout() == 'section_beaf_slider' ):
               get_template_part( 'template-parts/acf-beaf-slider' );
 
+            elseif( get_row_layout() == 'section_request_form' ):
+              get_template_part( 'template-parts/acf-request-form' );
+
 						endif;
 
 					endwhile;

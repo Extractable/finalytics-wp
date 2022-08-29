@@ -40,6 +40,24 @@
       display: block;
     }
   }
+  .decor-element {
+    position: absolute;
+    width: 357.92px;
+    height: 278px;
+    opacity: 0.7;
+    filter: blur(175.14px);
+    background: $blue-light;
+    display: none;
+    z-index: 0;
+    right: 0;
+    bottom: 0;
+    @include media-breakpoint-up(md){
+      width: 557.92px;
+      height: 378px;
+      bottom: -50px;
+      filter: blur(250.14px);
+    }
+  }
 }
 .quote_text {
   font-family: $ff-title;
@@ -99,22 +117,4 @@
   font-size: $fs-sm;
   line-height: 1.2;
   display: block;
-}
-.decor-element {
-  position: absolute;
-  width: 357.92px;
-  height: 278px;
-  opacity: 0.7;
-  filter: blur(175.14px);
-  background: $blue-light;
-  display: none;
-  z-index: 0;
-  right: 0;
-  bottom: 0;
-  @include media-breakpoint-up(md){
-    width: 557.92px;
-    height: 378px;
-    bottom: -50px;
-    filter: blur(250.14px);
-  }
 }

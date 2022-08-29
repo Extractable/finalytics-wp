@@ -2,6 +2,7 @@
   padding: 60px 0;
   background: $mainColor;
   color: $white;
+  position: relative;
   @include media-breakpoint-up(lg) {
     padding: 120px 0 114px;
   }
@@ -12,6 +13,10 @@
     @include media-breakpoint-up(lg) {
       margin-bottom: 56px;
     }
+  }
+  .beaf_content {
+    position: relative;
+    z-index: 1;
   }
   .beaf_tabs-nav {
     justify-content: space-between;
@@ -79,21 +84,22 @@
   }
   .decor-element {
     position: absolute;
-    width: 392px;
-    height: 315px;
-    left: 50%;
-    margin-left: -195px;
-    bottom: -130px;
+    width: 303px;
+    height: 193px;
+    bottom: 0;
+    left: -150px;
     background: $blue-light;
     opacity: 0.7;
     filter: blur(160.628px);
     z-index: 0;
     @include media-breakpoint-up(md){
-      width: 1165px;
-      height: 645px;
-      margin-left: -600px;
-      bottom: -400px;
-      filter: blur(418px);
+      width: 557.92px;
+      height: 459px;
+      right: 0;
+      top: 264px;
+      left: unset;
+      bottom: unset;
+      filter: blur(400.14px);
     }
   }
 }
