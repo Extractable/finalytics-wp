@@ -108,7 +108,7 @@
 		padding: 20px 15px;
 		@include media-breakpoint-up(xl){
 			top: calc(100% + 18px);
-			left: 32px;
+			left: 32px !important;
 			transition: opacity ease-out 0.5s;
 			width: 290px;
 			border-radius: $border-radius;

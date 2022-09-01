@@ -59,3 +59,9 @@ jQuery(document).ready(function($) {
 		}
 	});
 });
+
+jQuery(document).ready(function($) {
+	if ($('section:first-child').hasClass('scheme-dark')) {
+		$('.site-header').removeClass('scheme-light').addClass('scheme-dark');
+	}
+});

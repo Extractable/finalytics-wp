@@ -210,6 +210,12 @@ body {
     }
   }
 }
+.wpcf7-form {
+  .wpcf7-response-output {
+    border-color: $turquoise !important;
+    color: $white !important;
+  }
+}
 .contact-form_submit {
   margin-top: 44px;
 }
@@ -229,6 +235,12 @@ body {
         color: $blue-gray;
         background: $gray3 url("../img/arrow-down.svg") no-repeat 94% 55%;
       }
+    }
+  }
+  .wpcf7-form {
+    .wpcf7-response-output {
+      border-color: $blue !important;
+      color: $blue-gray !important;
     }
   }
 }

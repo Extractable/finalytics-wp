@@ -32,9 +32,20 @@
 		}
 	}
 	&.scheme-dark {
-
+		.site-logo_default {
+			display: block;
+		}
+		.site-logo_inverse {
+			display: none;
+		}
 	}
 	&.scheme-light {
+		.site-logo_default {
+			display: none;
+		}
+		.site-logo_inverse {
+			display: block;
+		}
 		color: $mainColor;
 		.btn {
 			&.btn-secondary {

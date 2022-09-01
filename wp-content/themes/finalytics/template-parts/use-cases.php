@@ -34,7 +34,7 @@
           <?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>
             <div class="col-md-4">
               <a class="use-cases_item-link" href="<?php the_permalink(); ?>">
-                <div class="use-cases_item-thumb"><?php the_post_thumbnail(); ?></div>
+                <div class="use-cases_item-thumb"><?php if (get_field("use_case_post_icon")) echo get_field("use_case_post_icon"); ?></div>
                 <h4 class="h4 use-cases_item-title"><?php the_title(); ?></h4>
                 <div class="use-cases_item-excerpt"><?php the_excerpt(); ?></div>
               </a>
