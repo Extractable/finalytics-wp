@@ -10,7 +10,8 @@
 ?>
 <?php $hero_small_custom_id = get_field("hero_small_custom_id"); ?>
 <section <?php if (!empty($hero_small_custom_id)): ?>id="<?php echo $hero_small_custom_id; ?>"<?php endif; ?>
-         class="hero-small <?php if( get_field('hero_small_color_scheme') == 'light' ): ?>scheme-light<?php else: ?>scheme-dark<?php endif; ?>">
+         class="hero-small <?php if( get_field('hero_small_color_scheme') == 'light' ): ?>scheme-light<?php else: ?>scheme-dark<?php endif; ?> <?php
+         if (get_field("hero_small_hide_overflow")): ?>overflow-hidden<?php endif; ?>">
   <div class="container-xl">
 
       <div class="hero-small_content">

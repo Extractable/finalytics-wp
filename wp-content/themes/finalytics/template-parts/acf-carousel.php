@@ -14,7 +14,8 @@
          class="carousel-two-col <?php if (get_sub_field('carousel_color_scheme') == 'white'): ?>scheme_white<?php
                                       elseif (get_sub_field('carousel_color_scheme') == 'dark_blue'): ?>scheme_dark-blue<?php
                                       elseif (get_sub_field('carousel_color_scheme') == 'light_gray'): ?>scheme_light-gray<?php
-                                      elseif (get_sub_field('carousel_color_scheme') == 'light_blue'): ?>scheme_light_blue<?php endif; ?>">
+                                      elseif (get_sub_field('carousel_color_scheme') == 'light_blue'): ?>scheme_light_blue<?php endif; ?> <?php
+         if (get_sub_field("carousel_hide_overflow")): ?>overflow-hidden<?php endif; ?>">
   <div class="container">
     <h2 class="h2 carousel-two-col__title"><?php if (get_sub_field("carousel_title")) echo get_sub_field("carousel_title"); ?></h2>
     <div class="carousel-two-col__wrap">

@@ -12,7 +12,8 @@
 <?php $video_custom_id = get_field("video_custom_id"); ?>
 <section <?php if (!empty($video_custom_id)): ?>id="<?php echo $video_custom_id; ?>"<?php endif; ?> class="video <?php if (get_field('video_color_scheme') == 'dark_blue'): ?>scheme_dark-blue<?php
     elseif (get_field('video_color_scheme') == 'white'): ?>scheme_white<?php
-    elseif (get_field('video_color_scheme') == 'light_gray'): ?>scheme_light-gray<?php endif; ?>">
+    elseif (get_field('video_color_scheme') == 'light_gray'): ?>scheme_light-gray<?php endif; ?> <?php
+if (get_field("video_hide_overflow")): ?> overflow-hidden<?php endif; ?>">
   <div class="container-fluid">
     <div class="video-inner">
       <div class="video-info">

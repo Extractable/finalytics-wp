@@ -15,7 +15,8 @@
                                       elseif (get_sub_field('img_w_t_color_scheme') == 'dark_blue'): ?>scheme_dark-blue<?php
                                       elseif (get_sub_field('img_w_t_color_scheme') == 'light_gray'): ?>scheme_light-gray<?php
                                       elseif (get_sub_field('img_w_t_color_scheme') == 'light_blue'): ?>scheme_light_blue<?php
-                                      endif; ?> <?php if (get_sub_field('img_w_t_image_position') == 'right'): ?>image-right<?php else: ?>image-left<?php endif; ?>">
+                                      endif; ?> <?php if (get_sub_field('img_w_t_image_position') == 'right'): ?>image-right<?php else: ?>image-left<?php endif; ?> <?php
+    if (get_sub_field("img_w_t_hide_overflow")): ?>overflow-hidden<?php endif; ?>">
   <div class="container iwt-wrapper">
     <div class="row">
       <div class="col-md-6 col-lg-7">
