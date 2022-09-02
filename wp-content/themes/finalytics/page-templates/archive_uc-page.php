@@ -34,8 +34,8 @@ get_header(); ?>
               'format' => '/page/%#%',
               'current' => $current_page,
               'total' => $total_pages,
-              'prev_text'    => __('«'),
-              'next_text'    => __('»'),
+              'prev_text'    => __('Prev'),
+              'next_text'    => __('Next'),
             ));
           }
           ?>
