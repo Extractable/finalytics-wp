@@ -3,6 +3,22 @@
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+	&.scheme-dark {
+		.acf-social-link {
+			filter: invert(6%) sepia(20%) saturate(5746%) hue-rotate(214deg) brightness(91%) contrast(102%);
+			&:hover {
+				filter: invert(14%) sepia(77%) saturate(4882%) hue-rotate(217deg) brightness(90%) contrast(93%);
+			}
+		}
+	}
+	&.scheme-light {
+		.acf-social-link {
+			filter: invert(93%) sepia(0%) saturate(7469%) hue-rotate(109deg) brightness(107%) contrast(107%);
+			&:hover {
+				filter: invert(81%) sepia(67%) saturate(430%) hue-rotate(111deg) brightness(93%) contrast(95%);
+			}
+		}
+	}
 }
 .acf-social-item {
 	margin-right: 15px;
@@ -13,7 +29,6 @@
 .acf-social-link {
 	height: 32px;
 	width: 32px;
-	filter: invert(93%) sepia(0%) saturate(7469%) hue-rotate(109deg) brightness(107%) contrast(107%);
 	transition: filter 500ms linear;
 	span {
 		display: none;
@@ -27,8 +42,7 @@
 	&.acf-social-lk {
 		background: url("../img/acf-social/linkedin.svg") no-repeat;
 	}
-	&:hover {
-		filter: invert(81%) sepia(67%) saturate(430%) hue-rotate(111deg) brightness(93%) contrast(95%);
-
+	&.acf-social-ml {
+		background: url("../img/acf-social/mail.svg") no-repeat;
 	}
 }

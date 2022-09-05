@@ -11225,6 +11225,18 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0; }
+  .acf-social-list.scheme-dark .acf-social-link {
+    -webkit-filter: invert(6%) sepia(20%) saturate(5746%) hue-rotate(214deg) brightness(91%) contrast(102%);
+            filter: invert(6%) sepia(20%) saturate(5746%) hue-rotate(214deg) brightness(91%) contrast(102%); }
+    .acf-social-list.scheme-dark .acf-social-link:hover {
+      -webkit-filter: invert(14%) sepia(77%) saturate(4882%) hue-rotate(217deg) brightness(90%) contrast(93%);
+              filter: invert(14%) sepia(77%) saturate(4882%) hue-rotate(217deg) brightness(90%) contrast(93%); }
+  .acf-social-list.scheme-light .acf-social-link {
+    -webkit-filter: invert(93%) sepia(0%) saturate(7469%) hue-rotate(109deg) brightness(107%) contrast(107%);
+            filter: invert(93%) sepia(0%) saturate(7469%) hue-rotate(109deg) brightness(107%) contrast(107%); }
+    .acf-social-list.scheme-light .acf-social-link:hover {
+      -webkit-filter: invert(81%) sepia(67%) saturate(430%) hue-rotate(111deg) brightness(93%) contrast(95%);
+              filter: invert(81%) sepia(67%) saturate(430%) hue-rotate(111deg) brightness(93%) contrast(95%); }
 
 .acf-social-item {
   margin-right: 15px; }
@@ -11234,8 +11246,6 @@ body {
 .acf-social-link {
   height: 32px;
   width: 32px;
-  -webkit-filter: invert(93%) sepia(0%) saturate(7469%) hue-rotate(109deg) brightness(107%) contrast(107%);
-          filter: invert(93%) sepia(0%) saturate(7469%) hue-rotate(109deg) brightness(107%) contrast(107%);
   -webkit-transition: -webkit-filter 500ms linear;
   transition: -webkit-filter 500ms linear;
   -o-transition: filter 500ms linear;
@@ -11249,9 +11259,8 @@ body {
     background: url("../img/acf-social/twitter.svg") no-repeat; }
   .acf-social-link.acf-social-lk {
     background: url("../img/acf-social/linkedin.svg") no-repeat; }
-  .acf-social-link:hover {
-    -webkit-filter: invert(81%) sepia(67%) saturate(430%) hue-rotate(111deg) brightness(93%) contrast(95%);
-            filter: invert(81%) sepia(67%) saturate(430%) hue-rotate(111deg) brightness(93%) contrast(95%); }
+  .acf-social-link.acf-social-ml {
+    background: url("../img/acf-social/mail.svg") no-repeat; }
 
 .social {
   display: -webkit-box;
