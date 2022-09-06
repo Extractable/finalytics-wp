@@ -11717,6 +11717,46 @@ body {
         .footer-copyright .menu li a:hover {
           color: #43E8E0; }
 
+.custom-single.scheme_light-gray {
+  background: url("../img/promo-split-bg.svg") no-repeat center right, -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#ffffff));
+  background: url("../img/promo-split-bg.svg") no-repeat center right, -o-linear-gradient(top, #f8f8f8 0%, #ffffff 100%);
+  background: url("../img/promo-split-bg.svg") no-repeat center right, linear-gradient(to bottom, #f8f8f8 0%, #ffffff 100%); }
+
+.custom-single.scheme_white {
+  background: #fff url("../img/promo-split-bg.svg") no-repeat center right/contain; }
+
+.custom-single_wrap {
+  padding: 31px 0 31px;
+  background: #F8F8F8; }
+  @media (min-width: 768px) {
+    .custom-single_wrap {
+      padding: 61px 0 31px; } }
+
+.custom-single_meta {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  @media (min-width: 768px) {
+    .custom-single_meta {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
+
+.entry-meta {
+  margin-bottom: 25px; }
+  @media (min-width: 768px) {
+    .entry-meta {
+      margin-bottom: 0; } }
+  .entry-meta .cat-links {
+    color: #626A86;
+    text-transform: uppercase; }
+    .entry-meta .cat-links a {
+      text-decoration: none;
+      color: #626A86;
+      margin: 0 2px; }
+      .entry-meta .cat-links a:hover {
+        color: #121931; }
+
 .hero {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13849,5 +13889,150 @@ p.promo-offset_text {
         color: #fff; }
         .request-form.scheme_white .request-form_form .btn-primary:hover {
           background: #00a3ff; }
+
+.rich-text {
+  padding: 20px 0 50px; }
+  @media (min-width: 768px) {
+    .rich-text {
+      padding: 20px 0 127px; } }
+  .rich-text h2, .rich-text h3, .rich-text h4, .rich-text h5 {
+    color: #08102A;
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0;
+    margin: 20px 0 24px; }
+    @media (min-width: 768px) {
+      .rich-text h2, .rich-text h3, .rich-text h4, .rich-text h5 {
+        margin: 57px 0 24px; } }
+  .rich-text h2 {
+    font-size: 28px; }
+    .rich-text h2:first-child {
+      margin: 0 0 24px; }
+    @media (min-width: 768px) {
+      .rich-text h2 {
+        font-size: 34px; } }
+    @media (min-width: 992px) {
+      .rich-text h2 {
+        font-size: 42px; } }
+  .rich-text h3 {
+    font-size: 22px; }
+    @media (min-width: 768px) {
+      .rich-text h3 {
+        font-size: 27px; } }
+    @media (min-width: 992px) {
+      .rich-text h3 {
+        font-size: 30px; } }
+  .rich-text h4 {
+    font-size: 20px; }
+    @media (min-width: 768px) {
+      .rich-text h4 {
+        font-size: 24px; } }
+    @media (min-width: 992px) {
+      .rich-text h4 {
+        font-size: 26px; } }
+  .rich-text h5 {
+    font-size: 18px; }
+    @media (min-width: 768px) {
+      .rich-text h5 {
+        font-size: 20px; } }
+    @media (min-width: 992px) {
+      .rich-text h5 {
+        font-size: 22px; } }
+  .rich-text p {
+    color: #626A86;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 23px; }
+  .rich-text img.aligncenter {
+    margin: 35px 0 0; }
+  .rich-text img.alignright {
+    float: right;
+    margin: 0 0 15px 15px; }
+  .rich-text img.alignleft {
+    float: left;
+    margin: 0 15px 15px 0; }
+  .rich-text ol, .rich-text ul {
+    margin: 0;
+    padding: 0 0 0 27px; }
+    .rich-text ol li, .rich-text ul li {
+      margin-bottom: 12px;
+      color: #626A86; }
+  .rich-text small {
+    font-size: 14px; }
+  .rich-text blockquote {
+    font-family: "Merriweather", sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 1.3;
+    letter-spacing: 0.1px;
+    color: #08102A;
+    margin: 30px 0 27px; }
+    @media (min-width: 768px) {
+      .rich-text blockquote {
+        margin: 61px 0 27px;
+        font-size: 28px; } }
+    .rich-text blockquote p {
+      font-family: "Merriweather", sans-serif;
+      font-weight: 500;
+      font-size: 25px;
+      line-height: 1.3;
+      letter-spacing: 0.1px;
+      color: #08102A; }
+      @media (min-width: 768px) {
+        .rich-text blockquote p {
+          font-size: 28px; } }
+  .rich-text cite {
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    display: block;
+    line-height: 1.4;
+    margin-bottom: 28px;
+    font-style: normal;
+    color: #08102A; }
+    @media (min-width: 768px) {
+      .rich-text cite {
+        margin-bottom: 58px;
+        font-size: 24px; } }
+  .rich-text table {
+    border: 1px solid #F2F4F7;
+    width: 100%;
+    border-collapse: separate !important;
+    border-spacing: 0;
+    margin: 10px 0 30px; }
+    @media (min-width: 768px) {
+      .rich-text table {
+        margin: 10px 0 60px;
+        overflow-x: unset; } }
+  .rich-text th {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.3;
+    text-align: center;
+    color: #08102A;
+    padding: 10px;
+    border-bottom: 1px solid #F2F4F7;
+    background: #EEF4FB;
+    height: 34px;
+    min-width: 120px; }
+    @media (min-width: 768px) {
+      .rich-text th {
+        height: 74px;
+        padding: 10px 20px;
+        font-size: 20px; } }
+  .rich-text td {
+    border-bottom: 1px solid #F2F4F7;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.3;
+    text-align: center;
+    color: #626A86;
+    height: 36px;
+    padding: 7px; }
+    @media (min-width: 768px) {
+      .rich-text td {
+        height: 66px; } }
 
 /*# sourceMappingURL=main.min.css.map */
