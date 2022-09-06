@@ -31,20 +31,21 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'finalytics' ); ?></a>
 
-	<header id="masthead" class="site-header <?php if( get_field('hero_color_scheme') == 'light' ): ?>scheme-light<?php else: ?>scheme-dark<?php endif; ?>">
+	<header id="masthead" class="site-header scheme-light">
     <div class="container-xl">
       <div class="row">
         <div class="col-6 col-sm-2">
           <div class="site-branding">
             <div class="site-logo">
-              <?php if( get_field('hero_color_scheme') == 'light' ): ?>
+              <div class="site-logo_inverse">
                 <?php $inverse_header_logo = get_theme_mod( 'inverse_header_logo' );
                 if ($inverse_header_logo )
                   echo '<a href="/" title="home"><img src="'.$inverse_header_logo.'" alt = "site logo" class="inverse_logo"></a>';
                 ?>
-              <?php else: ?>
+              </div>
+              <div class="site-logo_default">
                 <?php the_custom_logo(); ?>
-              <?php endif; ?>
+              </div>
             </div>
             <?php if ( is_front_page() && is_home() ) :
               ?>

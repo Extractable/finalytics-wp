@@ -17,11 +17,14 @@
 @import 'common/menu';
 @import 'common/acf-social-widget';
 @import 'common/social';
+@import 'common/archive';
 @import 'common/header';
 @import 'common/footer';
+@import 'common/custom-single';
 
 @import 'sections/hero';
 @import 'sections/hero-media';
+@import 'sections/hero-small';
 @import 'sections/img-with-text';
 @import 'sections/carousel';
 @import 'sections/stats';
@@ -36,6 +39,7 @@
 @import 'sections/quote';
 @import 'sections/beaf-slider';
 @import 'sections/request-form';
+@import 'sections/rich-text';
 
 
 

@@ -15,7 +15,8 @@
          elseif (get_field('promo_callout_color_scheme') == 'dark_blue'): ?>scheme_dark-blue<?php
          elseif (get_field('promo_callout_color_scheme') == 'light_gray'): ?>scheme_light-gray<?php
          elseif (get_field('promo_callout_color_scheme') == 'light_blue'): ?>scheme_light_blue<?php
-         endif; ?> <?php if (get_field('promo_callout_image_position') == 'right'): ?>image-right<?php else: ?>image-left<?php endif; ?>">
+         endif; ?> <?php if (get_field('promo_callout_image_position') == 'right'): ?>image-right<?php else: ?>image-left<?php endif; ?> <?php
+         if (get_field("promo_callout_hide_overflow")): ?>overflow-hidden<?php endif; ?>">
   <div class="promo-callout_wrapper">
     <div class="container">
       <?php if (get_field("promo_callout_heading")): ?><h2 class="h2 promo-callout_heading"><?php echo get_field("promo_callout_heading"); ?></h2><?php endif; ?>

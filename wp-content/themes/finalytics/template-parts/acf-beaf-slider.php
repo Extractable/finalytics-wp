@@ -10,7 +10,8 @@
 ?>
 
 <?php $beaf_custom_id = get_sub_field("beaf_custom_id"); ?>
-<section <?php if (!empty($beaf_custom_id)): ?>id="<?php echo $beaf_custom_id; ?>"<?php endif; ?> class="beaf-slider">
+<section <?php if (!empty($beaf_custom_id)): ?>id="<?php echo $beaf_custom_id; ?>"<?php endif; ?> class="beaf-slider <?php
+if (get_sub_field("beaf_hide_overflow")): ?>overflow-hidden<?php endif; ?>">
   <div class="container">
     <div class="beaf_content">
       <?php if (get_sub_field("beaf_heading")): ?><h2

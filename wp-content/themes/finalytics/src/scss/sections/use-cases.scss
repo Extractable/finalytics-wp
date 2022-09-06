@@ -17,6 +17,18 @@
       }
     }
   }
+  .use-cases_item-excerpt {
+    @include media-breakpoint-up(lg) {
+      height: 100px;
+      overflow: hidden;
+    }
+    p {
+      margin-bottom: 26px;
+    }
+    ul {
+      padding-left: 25px;
+    }
+  }
   &.scheme_light-blue {
     background: $bg-color url("../img/promo-split-bg.svg") no-repeat top right;
     .use-cases_title {
@@ -103,6 +115,9 @@
   }
   .use-cases_item-thumb {
     margin-bottom: 10px;
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 24px;
+    }
     img {
       max-width: 100%;
       height: auto;
@@ -128,11 +143,13 @@
     margin-bottom: 16px;
     line-height: 1.25;
     @include media-breakpoint-up(md) {
-      height: 64px;
+      max-height: 64px;
       overflow: hidden;
     }
   }
   .use-cases_grid {
+    position: relative;
+    z-index: 2;
     .row {
       justify-content: center;
     }

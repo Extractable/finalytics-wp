@@ -11,7 +11,8 @@
 
 <?php $media_custom_id = get_sub_field("media_custom_id"); ?>
 <section <?php if (!empty($media_custom_id)): ?>id="<?php echo $media_custom_id; ?>"<?php endif; ?> class="media <?php if (get_sub_field('media_color_scheme') == 'white'): ?>scheme_white<?php
-                            elseif (get_sub_field('media_color_scheme') == 'dark_blue'): ?>scheme_dark-blue<?php endif; ?>">
+                            elseif (get_sub_field('media_color_scheme') == 'dark_blue'): ?>scheme_dark-blue<?php endif; ?> <?php
+if (get_sub_field("media_hide_overflow")): ?>overflow-hidden<?php endif; ?>">
 
   <div class="container">
     <div class="media_content">

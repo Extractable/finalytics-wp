@@ -1,0 +1,107 @@
+.hero-small {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 105px 0 45px;
+  overflow: hidden;
+  @include media-breakpoint-up(lg){
+    padding: 130px 0 55px;
+  }
+  @include media-breakpoint-up(xl){
+    height: 550px;
+  }
+  .hero-small_content {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    @include media-breakpoint-up(md) {
+      width: 50%;
+    }
+  }
+  .hero-small_eyebrow {
+    text-transform: uppercase;
+    font-weight: $fw-bold;
+    font-size: $fs-rg;
+    margin-bottom: 18px;
+    display: block;
+    @include media-breakpoint-up(md){
+      margin-bottom: 25px;
+    }
+  }
+  .hero-small_title {
+    margin-bottom: 15px;
+    @include media-breakpoint-up(md){
+      margin-bottom: 34px;
+    }
+  }
+  .hero-small_text {
+    font-size: $fs-rg;
+    @include media-breakpoint-up(md){
+      font-size: $fs-lg;
+    }
+  }
+  .hero-small_cta {
+    margin-top: 27px;
+    .btn + .btn {
+      margin: 27px 0 0 0;
+      display: block;
+      &.btn-link {
+        text-align: left;
+      }
+      @include media-breakpoint-up(xl) {
+        margin: 0 0 0 43px;
+        display: inline-block;
+        &.btn-link {
+          text-align: center;
+        }
+      }
+    }
+  }
+  .decor-element {
+    position: absolute;
+    width: 392px;
+    height: 315px;
+    left: 50%;
+    margin-left: -195px;
+    bottom: -130px;
+    background: $blue-light;
+    opacity: 0.7;
+    filter: blur(160.628px);
+    display: none;
+    z-index: 0;
+    @include media-breakpoint-up(md){
+      width: 1165px;
+      height: 645px;
+      margin-left: -600px;
+      bottom: -400px;
+      filter: blur(418px);
+    }
+  }
+  &.scheme-dark {
+    background: $mainColor url("../img/hero-small-bg.svg") repeat;
+    .hero-small_eyebrow {
+      color: $white;
+    }
+    .hero-small_title {
+      color: $white;
+    }
+    .hero-small_text {
+      color: $gray;
+    }
+    .decor-element {
+      display: block;
+    }
+  }
+  &.scheme-light {
+    background: $white url("../img/hero-bg-top-dark.svg") repeat;
+    .hero-small_eyebrow {
+      color: $blue-gray;
+    }
+    .hero-small_title {
+      color: $mainColor;
+    }
+    .hero-small_text {
+      color: $blue-gray;
+    }
+  }
+}

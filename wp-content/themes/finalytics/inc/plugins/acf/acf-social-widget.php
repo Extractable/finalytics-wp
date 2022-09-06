@@ -32,7 +32,7 @@ class ACF_Social_Widget extends WP_Widget {
 
     //echo get_field('title', 'widget_' . $args['widget_id']);
     ?>
-      <ul class="acf-social-list">
+      <ul class="acf-social-list <?php if(get_field('social_color_scheme', 'widget_' . $args['widget_id']) == "light"): ?>scheme-light<?php else: ?>scheme-dark<?php endif; ?>">
         <li class="acf-social-item">
           <a href="<?php echo get_field('social_fb_url', 'widget_' . $args['widget_id']); ?>" class="acf-social-link acf-social-fb" target="_blank" title="facebook">
             <span>facebook</span>
@@ -46,6 +46,11 @@ class ACF_Social_Widget extends WP_Widget {
         <li class="acf-social-item">
           <a href="<?php echo get_field('social_lk_url', 'widget_' . $args['widget_id']); ?>" class="acf-social-link acf-social-lk" target="_blank" title="facebook">
             <span>linkedin</span>
+          </a>
+        </li>
+        <li class="acf-social-item">
+          <a href="mailto:<?php echo get_field('social_email_address', 'widget_' . $args['widget_id']); ?>" class="acf-social-link acf-social-ml" target="_blank" title="email">
+            <span>mail</span>
           </a>
         </li>
       </ul>

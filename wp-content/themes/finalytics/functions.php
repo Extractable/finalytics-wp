@@ -235,6 +235,20 @@ function finalytics_widgets_init() {
     'before_title' => '<h3 class="widget-title">',
     'after_title' => '</h3>',
   ) );
+
+  /**
+   * Custom Post Template zone
+   */
+
+  register_sidebar( array(
+    'name' => esc_html__( 'Custom Post zone', 'finalytics' ),
+    'id' => 'sidebar-9',
+    'description' => esc_html__( 'Add widgets here.', 'finalytics' ),
+    'before_widget' => '<section id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</section>',
+    'before_title' => '<h3 class="widget-title">',
+    'after_title' => '</h3>',
+  ) );
 }
 add_action( 'widgets_init', 'finalytics_widgets_init' );
 

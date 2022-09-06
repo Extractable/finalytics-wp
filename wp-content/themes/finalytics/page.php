@@ -31,6 +31,9 @@ get_header();
             elseif( get_row_layout() == 'section_hero_media' ):
                 get_template_part( 'template-parts/acf-hero-media' );
 
+            elseif( get_row_layout() == 'section_hero_small' ):
+              get_template_part( 'template-parts/acf-hero-small' );
+
 						elseif( get_row_layout() == 'section_img_text' ):
 							get_template_part( 'template-parts/acf-img-with-text' );
 

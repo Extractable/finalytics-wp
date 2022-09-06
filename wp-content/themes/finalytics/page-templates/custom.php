@@ -7,7 +7,8 @@ get_header(); ?>
 <div id="primary" class="content-area">
     <main class="main-content">
     <?php
-      get_template_part('template-parts/hero');
+      get_template_part('template-parts/hero-media');
+      get_template_part('template-parts/anchor-bar');
       get_template_part('template-parts/img-with-text');
       get_template_part('template-parts/carousel');
       get_template_part('template-parts/stats');
