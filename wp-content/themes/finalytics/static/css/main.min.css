@@ -12087,8 +12087,11 @@ body {
     .hero-small {
       padding: 130px 0 55px; } }
   @media (min-width: 1200px) {
-    .hero-small {
+    .hero-small.height-medium {
       height: 550px; } }
+  @media (min-width: 1200px) {
+    .hero-small.height-small {
+      height: 470px; } }
   .hero-small .hero-small_content {
     width: 100%;
     position: relative;
@@ -12149,16 +12152,18 @@ body {
         bottom: -400px;
         -webkit-filter: blur(418px);
                 filter: blur(418px); } }
-  .hero-small.scheme-dark {
-    background: #08102A url("../img/hero-small-bg.svg") repeat; }
-    .hero-small.scheme-dark .hero-small_eyebrow {
-      color: #fff; }
-    .hero-small.scheme-dark .hero-small_title {
-      color: #fff; }
-    .hero-small.scheme-dark .hero-small_text {
-      color: #C1C4CE; }
-    .hero-small.scheme-dark .decor-element {
-      display: block; }
+  .hero-small.scheme-dark.bg-dotted {
+    background: #08102A url("../img/hero-small-bg-dotted.svg") repeat; }
+  .hero-small.scheme-dark.bg-waves {
+    background: #08102A url("../img/hero-small-bg-waves.svg") no-repeat top right; }
+  .hero-small.scheme-dark .hero-small_eyebrow {
+    color: #fff; }
+  .hero-small.scheme-dark .hero-small_title {
+    color: #fff; }
+  .hero-small.scheme-dark .hero-small_text {
+    color: #C1C4CE; }
+  .hero-small.scheme-dark .decor-element {
+    display: block; }
   .hero-small.scheme-light {
     background: #fff url("../img/hero-bg-top-dark.svg") repeat; }
     .hero-small.scheme-light .hero-small_eyebrow {

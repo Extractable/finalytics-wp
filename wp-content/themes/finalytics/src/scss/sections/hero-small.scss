@@ -7,8 +7,15 @@
   @include media-breakpoint-up(lg){
     padding: 130px 0 55px;
   }
-  @include media-breakpoint-up(xl){
-    height: 550px;
+  &.height-medium {
+    @include media-breakpoint-up(xl){
+      height: 550px;
+    }
+  }
+  &.height-small {
+    @include media-breakpoint-up(xl){
+      height: 470px;
+    }
   }
   .hero-small_content {
     width: 100%;
@@ -78,7 +85,12 @@
     }
   }
   &.scheme-dark {
-    background: $mainColor url("../img/hero-small-bg.svg") repeat;
+    &.bg-dotted {
+      background: $mainColor url("../img/hero-small-bg-dotted.svg") repeat;
+    }
+    &.bg-waves {
+      background: $mainColor url("../img/hero-small-bg-waves.svg") no-repeat top right;
+    }
     .hero-small_eyebrow {
       color: $white;
     }
