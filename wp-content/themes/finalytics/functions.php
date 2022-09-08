@@ -300,3 +300,8 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 include_once( get_template_directory() . '/inc/plugins/acf/acf-social-widget.php');
+
+function finalytics_custom_excerpt_length( $length ) {
+  return 20;
+}
+add_filter( 'excerpt_length', 'finalytics_custom_excerpt_length', 999 );

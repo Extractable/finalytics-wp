@@ -4,15 +4,15 @@
  */
 get_header(); ?>
 
-<div id="primary" class="archive">
+<div id="primary" class="archive-uc">
   <?php get_template_part('template-parts/hero-small'); ?>
   <div class="container">
-    <div class="archive_wrap">
-      <div class="archive_heading">
+    <div class="archive-uc_wrap">
+      <div class="archive-uc_heading">
         <?php the_title('<h2 class="post-preview-title">', '</h2>');
         the_content(); ?>
       </div>
-      <div class="post-preview-list">
+      <div class="archive-uc_list">
         <?php
         $number_posts = get_field("archive_uc_posts_per_page");
         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -21,7 +21,7 @@ get_header(); ?>
         ?>
         <?php if ($the_query->have_posts()) : ?>
           <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-            <?php get_template_part('template-parts/content', 'archive', get_post_type()); ?>
+            <?php get_template_part('template-parts/content', 'archive_uc', get_post_type()); ?>
           <?php endwhile; ?>
           <div class="pagination">
           <?php $total_pages = $the_query->max_num_pages;

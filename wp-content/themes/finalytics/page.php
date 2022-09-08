@@ -76,6 +76,18 @@ get_header();
             elseif( get_row_layout() == 'section_request_form' ):
               get_template_part( 'template-parts/acf-request-form' );
 
+            elseif( get_row_layout() == 'section_request_form' ):
+              get_template_part( 'template-parts/acf-request-form' );
+
+            elseif( get_row_layout() == 'section_recommended' ):
+              get_template_part( 'template-parts/acf-recommended' );
+
+            elseif( get_row_layout() == 'section_rich_text' ):
+              get_template_part( 'template-parts/acf-rich-text' );
+
+            elseif( get_row_layout() == 'section_query_posts' ):
+              get_template_part( 'template-parts/acf-query-posts' );
+
 						endif;
 
 					endwhile;

@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying Archive posts previews
+ * Template part for displaying User Cases Archive posts previews
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
