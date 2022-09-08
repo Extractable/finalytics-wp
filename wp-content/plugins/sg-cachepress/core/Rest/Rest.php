@@ -24,7 +24,7 @@ class Rest {
 		'cache'       => 'rest_helper_cache',
 		'multisite'   => 'rest_helper_multisite',
 		'misc'        => 'rest_helper_misc',
-		'img'      => 'rest_helper_images',
+		'images'      => 'rest_helper_images',
 		'environment' => 'rest_helper_environment',
 		'cloudflare'  => 'rest_helper_cloudflare',
 		'dashboard'   => 'rest_helper_dashboard',
@@ -95,7 +95,7 @@ class Rest {
 		'memcache'            => 'Memcached',
 		'dynamic-cache'       => 'Dynamic Caching',
 		'webp-support'        => 'WebP Optimiztion',
-		'img'              => 'Images Optimization',
+		'images'              => 'Images Optimization',
 		'optimize-javascript' => 'JavaScript Minification',
 		'optimize-css'        => 'CSS Minification',
 	);
@@ -365,13 +365,13 @@ class Rest {
 	}
 
 	/**
-	 * Register the rest routes for img optimization.
+	 * Register the rest routes for images optimization.
 	 *
 	 * @since  5.4.0
 	 */
 	public function register_images_rest_routes() {
 		register_rest_route(
-			self::REST_NAMESPACE, '/optimize-img/', array(
+			self::REST_NAMESPACE, '/optimize-images/', array(
 				'methods'             => 'PUT',
 				'callback'            => array( $this->rest_helper_images, 'manage_image_optimization' ),
 				'permission_callback' => array( $this, 'check_permissions' ),
@@ -379,7 +379,7 @@ class Rest {
 		);
 
 		register_rest_route(
-			self::REST_NAMESPACE, '/optimize-img/', array(
+			self::REST_NAMESPACE, '/optimize-images/', array(
 				'methods'             => 'GET',
 				'callback'            => array( $this->rest_helper_images, 'check_image_optimizing_status' ),
 				'permission_callback' => array( $this, 'check_permissions' ),
@@ -387,7 +387,7 @@ class Rest {
 		);
 
 		register_rest_route(
-			self::REST_NAMESPACE, '/reset-img-optimization/', array(
+			self::REST_NAMESPACE, '/reset-images-optimization/', array(
 				'methods'             => 'GET',
 				'callback'            => array( $this->rest_helper_images, 'reset_images_optimization' ),
 				'permission_callback' => array( $this, 'check_permissions' ),
@@ -538,7 +538,7 @@ class Rest {
 							$popup_type = array(
 								'memcache',
 								'dynamic-cache',
-								'img',
+								'images',
 							);
 
 							return array_key_exists( $param, $popup_type );

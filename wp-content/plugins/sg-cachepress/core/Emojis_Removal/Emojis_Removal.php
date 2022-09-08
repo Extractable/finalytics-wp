@@ -38,7 +38,7 @@ class Emojis_Removal {
 			// Strip out any URLs referencing the WordPress.org emoji location.
 			foreach ( $urls as $key => $url ) {
 				// Continue with other urls if the url doens't match.
-				if ( @strpos( $url, 'https://s.w.org/img/core/emoji/' ) === false ) {
+				if ( @strpos( $url, 'https://s.w.org/images/core/emoji/' ) === false ) {
 					continue;
 				}
 

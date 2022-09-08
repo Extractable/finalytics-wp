@@ -58,7 +58,7 @@ class CSS extends Minify
      *
      * Files larger than this size (in kB) will not be imported into the CSS.
      * Importing files into the CSS as data-uri will save you some connections,
-     * but we should only import relatively small decorative img so that our
+     * but we should only import relatively small decorative images so that our
      * CSS file doesn't get too bulky.
      *
      * @param int $size Size in kB
@@ -242,7 +242,7 @@ class CSS extends Minify
     /**
      * Import files into the CSS, base64-ized.
      *
-     * @url(image.jpg) img will be loaded and their content merged into the
+     * @url(image.jpg) images will be loaded and their content merged into the
      * original file, to save HTTP requests.
      *
      * @param string $source  The file to import files for
@@ -331,7 +331,7 @@ class CSS extends Minify
 
             /*
              * If we'll save to a new path, we'll have to fix the relative paths
-             * to be relative no longer to the src file, but to the new path.
+             * to be relative no longer to the source file, but to the new path.
              * If we don't write to a file, fall back to same path so no
              * conversion happens (because we still want it to go through most
              * of the move code, which also addresses url() & @import syntax...)
@@ -350,9 +350,9 @@ class CSS extends Minify
 
     /**
      * Moving a css file should update all relative urls.
-     * Relative references (e.g. ../img/image.gif) in a certain css file,
+     * Relative references (e.g. ../images/image.gif) in a certain css file,
      * will have to be updated when a file is being saved at another location
-     * (e.g. ../../img/image.gif, if the new CSS file is 1 folder deeper).
+     * (e.g. ../../images/image.gif, if the new CSS file is 1 folder deeper).
      *
      * @param ConverterInterface $converter Relative path converter
      * @param string             $content   The CSS content to update relative urls for
@@ -613,7 +613,7 @@ class CSS extends Minify
     }
 
     /**
-     * Strip empty tags from src code.
+     * Strip empty tags from source code.
      *
      * @param string $content
      *
@@ -628,7 +628,7 @@ class CSS extends Minify
     }
 
     /**
-     * Strip comments from src code.
+     * Strip comments from source code.
      */
     protected function stripComments()
     {

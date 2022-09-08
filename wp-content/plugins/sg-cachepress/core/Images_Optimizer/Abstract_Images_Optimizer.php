@@ -20,7 +20,7 @@ abstract class Abstract_Images_Optimizer {
 	const BATCH_LIMIT = 200;
 
 	/**
-	 * The png image size limit. Bigger img won't be optimized.
+	 * The png image size limit. Bigger images won't be optimized.
 	 *
 	 * @since 5.0.0
 	 *
@@ -62,16 +62,16 @@ abstract class Abstract_Images_Optimizer {
 	}
 
 	/**
-	 * Get img batch.
+	 * Get images batch.
 	 *
 	 * @since  5.9.0
 	 *
-	 * @return array Array containing all img ids that are not optimized.
+	 * @return array Array containing all images ids that are not optimized.
 	 */
 	public function get_batch() {
 		// Flush the cache before prepare a new batch.
 		wp_cache_flush();
-		// Get the img.
+		// Get the images.
 		$images = get_posts(
 			array(
 				'post_type'      => 'attachment',
@@ -79,7 +79,7 @@ abstract class Abstract_Images_Optimizer {
 				'posts_per_page' => self::BATCH_LIMIT,
 				'fields'         => 'ids',
 				'meta_query'     => array(
-					// Skip optimized img.
+					// Skip optimized images.
 					array(
 						'key'     => $this->batch_skipped,
 						'compare' => 'NOT EXISTS',
@@ -97,7 +97,7 @@ abstract class Abstract_Images_Optimizer {
 	}
 
 	/**
-	 * Optimize the img.
+	 * Optimize the images.
 	 *
 	 * @since  5.9.0
 	 */
@@ -105,7 +105,7 @@ abstract class Abstract_Images_Optimizer {
 		$started = time();
 		// Get image ids.
 		$ids = $this->get_batch();
-		// There are no more img to process, so complete the optimization.
+		// There are no more images to process, so complete the optimization.
 		if ( empty( $ids ) ) {
 			// Clear the scheduled cron and update the optimization status.
 			$this->complete();
@@ -132,7 +132,7 @@ abstract class Abstract_Images_Optimizer {
 			wp_schedule_single_event( time() + $timeout, $this->cron_type );
 		}
 
-		// Loop through all img and optimize them.
+		// Loop through all images and optimize them.
 		foreach ( $ids as $id ) {
 			// Keep track of the number of times we've attempted to optimize the image.
 			$count = (int) get_post_meta( $id, $this->process_map['attempts'], true );
@@ -225,7 +225,7 @@ abstract class Abstract_Images_Optimizer {
 	}
 
 	/**
-	 * Optimize newly uploaded img.
+	 * Optimize newly uploaded images.
 	 *
 	 * @since  5.9.0
 	 *
@@ -241,7 +241,7 @@ abstract class Abstract_Images_Optimizer {
 	}
 
 	/**
-	 * Update the total unoptimized img count.
+	 * Update the total unoptimized images count.
 	 *
 	 * @since  5.4.0
 	 *
@@ -262,7 +262,7 @@ abstract class Abstract_Images_Optimizer {
 	}
 
 	/**
-	 * Deletes img meta_key flag to allow reoptimization.
+	 * Deletes images meta_key flag to allow reoptimization.
 	 *
 	 * @since  5.9.0
 	 */

@@ -29,7 +29,7 @@ class Cli {
 		// Heartbeat.
 		\WP_CLI::add_command( 'sg heartbeat', 'SiteGround_Optimizer\Cli\Cli_Heartbeat' );
 
-		\WP_CLI::add_command( 'sg img', 'SiteGround_Optimizer\Cli\Cli_Images' );
+		\WP_CLI::add_command( 'sg images', 'SiteGround_Optimizer\Cli\Cli_Images' );
 
 		// DNS Prefetch.
 		\WP_CLI::add_command( 'sg dns-prefetch', 'SiteGround_Optimizer\Cli\Cli_DNS_Prefetch' );

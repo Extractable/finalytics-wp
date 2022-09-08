@@ -39,7 +39,7 @@ class Lazy_Load_Iframes extends Abstract_Lazy_Load {
 	);
 
 	/**
-	 * Filter for excluding specific iframe by src.
+	 * Filter for excluding specific iframe by source.
 	 *
 	 * @var string
 	 */

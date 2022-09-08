@@ -17,7 +17,7 @@ class Rest_Helper_Webp extends Rest_Helper {
 	}
 
 	/**
-	 * Initialize img optimization.
+	 * Initialize images optimization.
 	 *
 	 * @since  5.4.0
 	 */
@@ -59,7 +59,7 @@ class Rest_Helper_Webp extends Rest_Helper {
 	}
 
 	/**
-	 * Stops img optimization.
+	 * Stops images optimization.
 	 *
 	 * @since  5.0.8
 	 */

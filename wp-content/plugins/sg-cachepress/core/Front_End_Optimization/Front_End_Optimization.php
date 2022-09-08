@@ -275,7 +275,7 @@ class Front_End_Optimization {
 	 *
 	 * @since  5.0.0
 	 *
-	 * @param  string $src The src URL of the enqueued style.
+	 * @param  string $src The source URL of the enqueued style.
 	 *
 	 * @return string $src The modified src if there are query strings, the initial src otherwise.
 	 */
@@ -383,7 +383,7 @@ class Front_End_Optimization {
 			if (
 				in_array( $handle, $excludes ) || // Do not include excluded assets.
 				! is_bool( @strpos( $handle, 'siteground' ) ) ||
-				! is_string( $items->registered[ $handle ]->src ) // Do not include asset without src.
+				! is_string( $items->registered[ $handle ]->src ) // Do not include asset without source.
 			) {
 				continue;
 			}

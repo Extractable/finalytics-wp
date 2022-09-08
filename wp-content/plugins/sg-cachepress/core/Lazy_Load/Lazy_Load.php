@@ -27,7 +27,7 @@ class Lazy_Load {
 		),
 		'lazyload_images'  => array(
 			array(
-				'option' => 'img',
+				'option' => 'images',
 				'hook'   => 'the_content',
 			),
 			array(

@@ -30,7 +30,7 @@ if ('cli' !== php_sapi_name()) {
     fwrite(STDERR, $argv[1] . ' must be run in the command line' . PHP_EOL);
     exit(1);
 }
-// check if src file exists
+// check if source file exists
 if (!file_exists($argv[1])) {
     fwrite(STDERR, 'Source file "' . $argv[1] . '" not found' . PHP_EOL);
     exit(1);

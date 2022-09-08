@@ -149,7 +149,7 @@ class Minifier {
 			// Skip scripts.
 			if (
 				stripos( $wp_scripts->registered[ $handle ]->src, '.min.js' ) !== false || // If the file is minified already.
-				false === $wp_scripts->registered[ $handle ]->src || // If the src is empty.
+				false === $wp_scripts->registered[ $handle ]->src || // If the source is empty.
 				in_array( $handle, $excluded_scripts ) || // If the file is ignored.
 				@strpos( Helper_Service::get_home_url(), parse_url( $wp_scripts->registered[ $handle ]->src, PHP_URL_HOST ) ) === false // Skip all external sources.
 			) {
@@ -303,7 +303,7 @@ class Minifier {
 			// Skip styles.
 			if (
 				stripos( $wp_styles->registered[ $handle ]->src, '.min.css' ) !== false || // If the file is minified already.
-				false === $wp_styles->registered[ $handle ]->src || // If the src is empty.
+				false === $wp_styles->registered[ $handle ]->src || // If the source is empty.
 				in_array( $handle, $excluded_styles ) || // If the file is ignored.
 				@strpos( Helper_Service::get_home_url(), parse_url( $wp_styles->registered[ $handle ]->src, PHP_URL_HOST ) ) === false // Skip all external sources.
 			) {

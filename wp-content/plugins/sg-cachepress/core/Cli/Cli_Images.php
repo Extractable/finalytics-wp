@@ -3,9 +3,9 @@ namespace SiteGround_Optimizer\Cli;
 
 use SiteGround_Optimizer\Images_Optimizer\Images_Optimizer;
 /**
- * WP-CLI: wp sg img value.
+ * WP-CLI: wp sg images value.
  *
- * Run the `wp sg img {compression-level} {frequency}` command to change the settgins of specific plugin functionality.
+ * Run the `wp sg images {compression-level} {frequency}` command to change the settgins of specific plugin functionality.
  *
  * @since 6.0.0
  * @package Cli

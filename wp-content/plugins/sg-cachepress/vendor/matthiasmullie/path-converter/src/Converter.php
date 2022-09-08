@@ -6,9 +6,9 @@ namespace MatthiasMullie\PathConverter;
  * Convert paths relative from 1 file to another.
  *
  * E.g.
- *     ../../img/icon.jpg relative to /css/imports/icons.css
+ *     ../../images/icon.jpg relative to /css/imports/icons.css
  * becomes
- *     ../img/icon.jpg relative to /css/minified.css
+ *     ../images/icon.jpg relative to /css/minified.css
  *
  * Please report bugs on https://github.com/matthiasmullie/path-converter/issues
  *
@@ -81,9 +81,9 @@ class Converter implements ConverterInterface
 
         /*
          * Example:
-         *     /home/forkcms/frontend/cache/compiled_templates/../../core/layout/css/../img/img.gif
+         *     /home/forkcms/frontend/cache/compiled_templates/../../core/layout/css/../images/img.gif
          * to
-         *     /home/forkcms/frontend/core/layout/img/img.gif
+         *     /home/forkcms/frontend/core/layout/images/img.gif
          */
         do {
             $path = preg_replace('/[^\/]+(?<!\.\.)\/\.\.\//', '', $path, -1, $count);
@@ -96,7 +96,7 @@ class Converter implements ConverterInterface
      * Figure out the shared path of 2 locations.
      *
      * Example:
-     *     /home/forkcms/frontend/core/layout/img/img.gif
+     *     /home/forkcms/frontend/core/layout/images/img.gif
      * and
      *     /home/forkcms/frontend/cache/minified_css
      * share
@@ -133,9 +133,9 @@ class Converter implements ConverterInterface
      * Convert paths relative from 1 file to another.
      *
      * E.g.
-     *     ../img/img.gif relative to /home/forkcms/frontend/core/layout/css
+     *     ../images/img.gif relative to /home/forkcms/frontend/core/layout/css
      * should become:
-     *     ../../core/layout/img/img.gif relative to
+     *     ../../core/layout/images/img.gif relative to
      *     /home/forkcms/frontend/cache/minified_css
      *
      * @param string $path The relative path that needs to be converted

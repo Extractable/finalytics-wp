@@ -178,28 +178,28 @@ class Modules {
 		),
 		'optimize_images' => array(
 			'title'   => 'Images Optimization',
-			'text'    => 'We will automatically optimize all new img that you upload to your Media Library.',
+			'text'    => 'We will automatically optimize all new images that you upload to your Media Library.',
 			'weight'  => 40,
-			'tab'     => 'img',
+			'tab'     => 'images',
 			'options' => array(
 				'siteground_optimizer_optimize_images',
 			),
 		),
 		'webp_support' => array(
 			'title'   => 'Generate WebP Copies of New Images',
-			'text'    => 'WebP is a next generation image format supported by modern browers which greatly reduces the size of your img.',
+			'text'    => 'WebP is a next generation image format supported by modern browers which greatly reduces the size of your images.',
 			'weight'  => 75,
 			'avalon'  => 1,
-			'tab'     => 'img',
+			'tab'     => 'images',
 			'options' => array(
 				'siteground_optimizer_webp_support',
 			),
 		),
 		'lazyload_images' => array(
 			'title'   => 'Lazy Load Media',
-			'text'    => 'Load img only when they are visible in the browser.',
+			'text'    => 'Load images only when they are visible in the browser.',
 			'weight'  => 76,
-			'tab'     => 'img',
+			'tab'     => 'images',
 			'options' => array(
 				'siteground_optimizer_lazyload_images',
 				'siteground_optimizer_lazyload_gravatars',
@@ -250,7 +250,7 @@ class Modules {
 				'emojis',
 			),
 		),
-		'img'      => array(
+		'images'      => array(
 			'title'   => 'Media Optimization',
 			'modules' => array(
 				'optimize_images',
@@ -341,7 +341,7 @@ class Modules {
 				'optimize_images',
 			),
 		),
-		'tiny-compress-img/tiny-compress-img.php' => array(
+		'tiny-compress-images/tiny-compress-images.php' => array(
 			'title'   => 'Tiny Compress Images',
 			'modules' => array(
 				'optimize_images',
