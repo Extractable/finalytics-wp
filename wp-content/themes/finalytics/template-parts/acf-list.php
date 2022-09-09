@@ -10,7 +10,6 @@
 ?>
 
 <?php $list_custom_id = get_sub_field("list_custom_id"); ?>
-
 <section <?php if (!empty($list_custom_id)): ?>id="<?php echo $list_custom_id; ?>"<?php endif; ?>
          class="list <?php if (get_sub_field('list_color_scheme') == 'dark_blue'): ?>scheme_dark-blue<?php
          elseif (get_sub_field('list_color_scheme') == 'light_blue'): ?>scheme_light-blue<?php endif; ?>">
