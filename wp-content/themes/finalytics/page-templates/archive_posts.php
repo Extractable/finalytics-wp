@@ -74,6 +74,9 @@ get_header(); ?>
           elseif( get_row_layout() == 'section_query_posts' ):
             get_template_part( 'template-parts/acf-query-posts' );
 
+          elseif( get_row_layout() == 'section_list' ):
+            get_template_part( 'template-parts/acf-list' );
+
           endif;
 
         endwhile;

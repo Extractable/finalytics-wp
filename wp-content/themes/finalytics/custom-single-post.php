@@ -41,6 +41,8 @@ get_header(); ?>
               get_template_part('template-parts/acf-blog-preview');
             elseif (get_row_layout() == 'section_post_rich_text'):
               get_template_part('template-parts/acf-rich-text');
+            elseif( get_row_layout() == 'section_post_list' ):
+              get_template_part( 'template-parts/acf-list' );
 
             endif;
 

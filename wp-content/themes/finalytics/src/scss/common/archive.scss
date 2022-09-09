@@ -90,6 +90,10 @@
 
 .archive-posts {
   background: $bg-color;
+  padding: 0 0 20px;
+  @include media-breakpoint-up(md){
+    padding: 0 0 50px;
+  }
   .row  {
     [class*='col'] {
       margin-bottom: 30px;
