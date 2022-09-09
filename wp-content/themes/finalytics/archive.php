@@ -9,7 +9,6 @@
 
 get_header();
 ?>
-
   <div id="primary" class="archive">
   <div class="container">
     <div class="archive_wrap">

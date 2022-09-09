@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying custom post type - Use cases single post
+ * The template for displaying Single post of Use Case post type
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *

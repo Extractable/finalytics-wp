@@ -17,6 +17,11 @@
       height: 470px;
     }
   }
+  &.height-tiny {
+    @include media-breakpoint-up(lg){
+      height: 340px;
+    }
+  }
   .hero-small_content {
     width: 100%;
     position: relative;

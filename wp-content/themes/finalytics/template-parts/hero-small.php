@@ -13,7 +13,8 @@
          class="hero-small <?php if( get_field('hero_small_color_scheme') == 'light' ): ?>scheme-light<?php else: ?>scheme-dark<?php endif; ?> <?php
          if (get_field("hero_small_hide_overflow")): ?>overflow-hidden<?php endif; ?> <?php if( get_field('hero_small_background_image') == 'waves' ): ?>bg-waves<?php
          else: ?>bg-dotted<?php endif; ?> <?php if (get_field('hero_small_banner_height') == 'medium'): ?>height-medium<?php
-         else: ?>height-small<?php endif; ?>">
+         elseif (get_field('hero_small_banner_height') == 'small'): ?>height-small<?php
+         elseif (get_field('hero_small_banner_height') == 'tiny'): ?>height-tiny<?php endif; ?>">
   <div class="container-xl">
       <div class="hero-small_content">
         <?php if (!empty(get_field("hero_small_eyebrow"))): ?>

@@ -12,7 +12,8 @@
 <?php $recommended_custom_id = get_sub_field("recommended_custom_id"); ?>
 
 <section <?php if (!empty($recommended_custom_id)): ?>id="<?php echo $recommended_custom_id; ?>"<?php endif; ?>
-         class="recommended">
+         class="recommended <?php if (get_sub_field('recommended_color_scheme') == 'white'): ?>scheme_white<?php
+         elseif (get_sub_field('recommended_color_scheme') == 'light_blue'): ?>scheme_light-blue<?php endif; ?>">
   <div class="container-xl">
     <div class="recommended-holder">
       <?php if (!empty(get_sub_field("recommended_title"))): ?>
@@ -58,7 +59,7 @@
               // Setup this post for WP functions (variable must be named $post).
               setup_postdata($post); ?>
               <div class="recommended-secondary_item">
-                <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="blog-preview_item-link"></a>
+                <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="recommended-secondary_item-link"></a>
                 <div class="recommended-secondary_thumb"><?php the_post_thumbnail(); ?></div>
                 <h4 class="h4 recommended-secondary_title"><?php $title = the_title('', '', FALSE);
                   echo substr($title, 0, 27); ?></h4>

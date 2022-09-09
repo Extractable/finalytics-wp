@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying Query posts section (ACF Flexible content)
+ * Template part for displaying Query posts section
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -9,27 +9,27 @@
 
 ?>
 
-<?php $query_posts_custom_id = get_sub_field("query_posts_custom_id"); ?>
+<?php $query_posts_custom_id = get_field("query_posts_custom_id"); ?>
 
 <section <?php if (!empty($query_posts_custom_id)): ?>id="<?php echo $query_posts_custom_id; ?>"<?php endif; ?> class="query-posts">
   <div class="container-xl">
     <section class="query-posts_wrap">
-      <div class="query-posts_list <?php if (get_sub_field('query_posts_posts_per_row') == 'one'): ?>one-col<?php
-      elseif (get_sub_field('query_posts_posts_per_row') == 'four'): ?>four-col<?php endif; ?>">
+      <div class="query-posts_list <?php if (get_field('query_posts_posts_per_row') == 'one'): ?>one-col<?php
+      elseif (get_field('query_posts_posts_per_row') == 'four'): ?>four-col<?php endif; ?>">
 
         <?php
-        $number_posts = get_sub_field("query_posts_posts_per_page");
+        $number_posts = get_field("query_posts_posts_per_page");
         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-        $cat_id = get_sub_field("query_posts_category_id");
-        $post_type = get_sub_field("query_posts_post_type");
+        $cat_id = get_field("query_posts_category_id");
+        $post_type = get_field("query_posts_post_type");
         If(empty($cat_id)):
-        $args = array('posts_per_page' => $number_posts, 'paged' => $paged, 'post_type' => $post_type, );
+          $args = array('posts_per_page' => $number_posts, 'paged' => $paged, 'post_type' => $post_type, );
         else:
-        $args = array('posts_per_page' => $number_posts, 'paged' => $paged, 'cat' => $cat_id, );
+          $args = array('posts_per_page' => $number_posts, 'paged' => $paged, 'cat' => $cat_id, );
         endif;
         $the_query = new WP_Query($args);
         ?>
-        <?php if (get_sub_field('query_posts_posts_per_row') == 'one'): ?>
+        <?php if (get_field('query_posts_posts_per_row') == 'one'): ?>
 
           <?php if ($the_query->have_posts()) : ?>
             <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
@@ -59,7 +59,7 @@
 
           <?php endif; ?>
 
-        <?php elseif (get_sub_field('query_posts_posts_per_row') == 'four'): ?>
+        <?php elseif (get_field('query_posts_posts_per_row') == 'four'): ?>
           <?php if ($the_query->have_posts()) : ?>
             <div class="row">
               <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
