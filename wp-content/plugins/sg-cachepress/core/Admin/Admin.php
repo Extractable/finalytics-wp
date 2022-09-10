@@ -248,7 +248,7 @@ class Admin {
 			'manage_options',
 			\SiteGround_Optimizer\PLUGIN_SLUG,   // Page slug.
 			array( $this, 'render' ),
-			\SiteGround_Optimizer\URL . '/assets/img/icon.svg'
+			\SiteGround_Optimizer\URL . '/assets/images/icon.svg'
 		);
 
 		if ( is_network_admin() ) {
@@ -337,7 +337,7 @@ class Admin {
 			),
 			'data_consent_popup'  => $this->get_popup_settings(),
 			'config'              => array(
-				'assetsPath' => SiteGround_Optimizer\URL . '/assets/img',
+				'assetsPath' => SiteGround_Optimizer\URL . '/assets/images',
 			),
 			'navigation' => $navigation,
 		);

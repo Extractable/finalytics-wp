@@ -191,7 +191,7 @@ class JS extends Minify
     }
 
     /**
-     * Strip comments from src code.
+     * Strip comments from source code.
      */
     protected function stripComments()
     {
@@ -272,7 +272,7 @@ class JS extends Minify
             'global',
             'ignoreCase',
             'multiline',
-            'src',
+            'source',
             'sticky',
             'unicode',
             // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#Methods_2

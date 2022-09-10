@@ -1,5 +1,5 @@
 before_commands:
-    - "composer install --prefer-src"
+    - "composer install --prefer-source"
 
 tools:
     php_code_coverage:

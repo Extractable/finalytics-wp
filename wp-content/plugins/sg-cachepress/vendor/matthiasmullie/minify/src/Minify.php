@@ -41,7 +41,7 @@ abstract class Minify
 
     /**
      * This array will hold content of strings and regular expressions that have
-     * been extracted from the JS src code, so we can reliably match "code",
+     * been extracted from the JS source code, so we can reliably match "code",
      * without having to worry about potential "code-like" characters inside.
      *
      * @var string[]
@@ -53,7 +53,7 @@ abstract class Minify
      */
     public function __construct(/* $data = null, ... */)
     {
-        // it's possible to add the src through the constructor as well ;)
+        // it's possible to add the source through the constructor as well ;)
         if (func_num_args()) {
             call_user_func_array(array($this, 'add'), func_get_args());
         }
@@ -241,7 +241,7 @@ abstract class Minify
     }
 
     /**
-     * Register a pattern to execute against the src content.
+     * Register a pattern to execute against the source content.
      *
      * If $replacement is a string, it must be plain text. Placeholders like $1 or \2 don't work.
      * If you need that functionality, use a callback instead.

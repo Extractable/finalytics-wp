@@ -29,7 +29,7 @@ class Images_Optimizer_Webp extends Abstract_Images_Optimizer {
 	public $type = 'webp';
 
 	/**
-	 * The total non-converted img option.
+	 * The total non-converted images option.
 	 *
 	 * @var string
 	 */
@@ -157,7 +157,7 @@ class Images_Optimizer_Webp extends Abstract_Images_Optimizer {
 
 			case IMAGETYPE_PNG:
 				// Bail if the image is bigger than 500k.
-				// PNG usage is not recommended and img bigger than 500kb
+				// PNG usage is not recommended and images bigger than 500kb
 				// hit the limits.
 				if ( filesize( $filepath ) > self::PNGS_SIZE_LIMIT ) {
 					return true;
@@ -228,7 +228,7 @@ class Images_Optimizer_Webp extends Abstract_Images_Optimizer {
 	}
 
 	/**
-	 * Regenerate the webp copies, when the original img is edited.
+	 * Regenerate the webp copies, when the original images is edited.
 	 *
 	 * @since  5.4.0
 	 *

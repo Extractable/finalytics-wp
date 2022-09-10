@@ -1,0 +1,38 @@
+.spacer {
+  &.height-tiny {
+    height: 30px;
+  }
+  &.height-small {
+    height: 30px;
+    @include media-breakpoint-up(md){
+      height: 60px;
+    }
+  }
+  &.height-medium {
+    height: 45px;
+    @include media-breakpoint-up(md){
+      height: 90px;
+    }
+  }
+  &.height-big {
+    height: 45px;
+    @include media-breakpoint-up(md){
+      height: 90px;
+    }
+    @include media-breakpoint-up(xl){
+      height: 120px;
+    }
+  }
+  &.height-large {
+    height: 60px;
+    @include media-breakpoint-up(md){
+      height: 90px;
+    }
+    @include media-breakpoint-up(lg){
+      height: 120px;
+    }
+    @include media-breakpoint-up(xl){
+      height: 150px;
+    }
+  }
+}

@@ -427,6 +427,10 @@ Our plugin uses a cookie in order to function properly. It does not store person
 1. Go to Plugins -> Installed Plugins and click the 'Activate' link under the WordPress SiteGround Optimizer listing
 
 == Changelog ==
+= Version 7.2.1 =
+Release Date: August 10th, 2022
+
+* Improved Cloudflare detection
 
 = Version 7.2.0 =
 Release Date: July 14th, 2022

@@ -1,11 +1,11 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => 'dev-develop',
-        'version' => 'dev-develop',
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'c4aa4c715d9278b29339fa0e8025f3d21d36b9a1',
+        'reference' => 'eca681d69253003d423ddfccef2a3eb663b3a006',
         'name' => 'siteground/sg-cachepress',
         'dev' => true,
     ),
@@ -67,12 +67,12 @@
             'dev_requirement' => false,
         ),
         'siteground/sg-cachepress' => array(
-            'pretty_version' => 'dev-develop',
-            'version' => 'dev-develop',
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'c4aa4c715d9278b29339fa0e8025f3d21d36b9a1',
+            'reference' => 'eca681d69253003d423ddfccef2a3eb663b3a006',
             'dev_requirement' => false,
         ),
         'siteground/siteground-data' => array(
@@ -83,7 +83,7 @@
             'aliases' => array(
                 0 => '9999999-dev',
             ),
-            'reference' => '8c6d89492847e43aeef2d5d0cb8860aa1e0220c3',
+            'reference' => '58ba53b8a5711c0cd33be62ebedf99cc2ec180ec',
             'dev_requirement' => false,
         ),
         'siteground/siteground-emails' => array(

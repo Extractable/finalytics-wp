@@ -66,7 +66,7 @@ class Rest_Helper_Dashboard extends Rest_Helper {
 				'icon'        => 'product-stopwatch',
 				'icon_color'  => 'grassy',
 				'status'      => 'warning',
-				'text'        => __( 'Optimizing your media and img can significantly decrease usage and loading time.', 'sg-cachepress' ),
+				'text'        => __( 'Optimizing your media and images can significantly decrease usage and loading time.', 'sg-cachepress' ),
 				'button_text' => __( ' Go to Media', 'sg-cachepress' ),
 				'button_link' => 'admin.php?page=sgo_media',
 				'title'       => __( 'Media', 'sg-cachepress' ),

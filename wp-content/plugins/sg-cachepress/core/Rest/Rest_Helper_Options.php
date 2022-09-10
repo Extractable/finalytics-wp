@@ -411,7 +411,7 @@ class Rest_Helper_Options extends Rest_Helper {
 		$options['post_types']                  = $this->options->get_post_types();
 		$options['previous_tests']              = $this->analysis->rest_get_test_results();
 
-		// Check for non converted img when we are on avalon server.
+		// Check for non converted images when we are on avalon server.
 		if ( Helper_Service::is_siteground() ) {
 			$options['has_images_for_conversion'] = $this->options->check_for_unoptimized_images( 'webp' );
 		}

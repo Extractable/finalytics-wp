@@ -346,12 +346,9 @@
             "source": {
                 "type": "git",
                 "url": "git@gitlab.siteground.com:wordpress/siteground-data.git",
-                "reference": "8c6d89492847e43aeef2d5d0cb8860aa1e0220c3"
+                "reference": "58ba53b8a5711c0cd33be62ebedf99cc2ec180ec"
             },
-            "require": {
-                "siteground/siteground-helper": "master@dev"
-            },
-            "time": "2022-07-14T12:26:29+00:00",
+            "time": "2022-06-09T12:55:21+00:00",
             "default-branch": true,
             "type": "library",
             "installation-source": "source",

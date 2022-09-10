@@ -38,7 +38,7 @@ class Images_Optimizer extends Abstract_Images_Optimizer {
 	public $type = 'image';
 
 	/**
-	 * The total non-optimized img option.
+	 * The total non-optimized images option.
 	 *
 	 * @var string
 	 */
@@ -292,7 +292,7 @@ class Images_Optimizer extends Abstract_Images_Optimizer {
 
 			case IMAGETYPE_PNG:
 				// Bail if the image is bigger than 500k.
-				// PNG usage is not recommended and img bigger than 500kb
+				// PNG usage is not recommended and images bigger than 500kb
 				// hit the limits.
 				if ( filesize( $filepath ) > self::PNGS_SIZE_LIMIT ) {
 					return true;
@@ -330,7 +330,7 @@ class Images_Optimizer extends Abstract_Images_Optimizer {
 	 * @param  int $id The attachment id.
 	 */
 	public function get_preview_images( $id ) {
-		$filepath = ! empty( $id ) ? get_attached_file( $id ) : \SiteGround_Optimizer\DIR . '/assets/img/preview.jpg';
+		$filepath = ! empty( $id ) ? get_attached_file( $id ) : \SiteGround_Optimizer\DIR . '/assets/images/preview.jpg';
 
 		$urls = array(
 			0 => array(
@@ -399,7 +399,7 @@ class Images_Optimizer extends Abstract_Images_Optimizer {
 	}
 
 	/**
-	 * Restore the original img.
+	 * Restore the original images.
 	 *
 	 * @since  6.0.0
 	 *
