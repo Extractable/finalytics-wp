@@ -95,6 +95,9 @@ get_header();
             elseif (get_row_layout() == 'section_heading'):
               get_template_part('template-parts/acf-heading');
 
+            elseif (get_row_layout() == 'section_spacer'):
+              get_template_part('template-parts/acf-spacer');
+
             endif;
 
           endwhile;

@@ -13,7 +13,6 @@ get_header();
   <div class="container">
     <div class="archive_wrap">
 
-
       <?php if (have_posts()) : ?>
 
         <header class="archive_heading">

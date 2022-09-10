@@ -12558,11 +12558,10 @@ body {
     top: 20px; }
   .carousel-two-col .decor-element {
     position: absolute;
-    width: 557px;
-    height: 459px;
+    width: 480px;
+    height: 414px;
     right: 0;
-    top: 50%;
-    margin-top: -225px;
+    top: 40%;
     display: none;
     background: #00a3ff;
     opacity: 0.7;
@@ -13164,8 +13163,7 @@ p.image-grid_item-descr {
 
 .blog-preview {
   padding: 63px 0 62px;
-  position: relative;
-  overflow: hidden; }
+  position: relative; }
   @media (min-width: 768px) {
     .blog-preview {
       padding: 90px 0 80px; } }
@@ -13201,6 +13199,25 @@ p.image-grid_item-descr {
     .blog-preview.scheme_light-blue .blog-preview_item-eyebrow {
       color: #0947B5; }
     .blog-preview.scheme_light-blue .blog-preview_item-excerpt {
+      color: #626A86; }
+  .blog-preview.scheme_light-gray {
+    background: #FBFBFB url("../img/promo-split-bg.svg") no-repeat top right; }
+    .blog-preview.scheme_light-gray .blog-preview_title {
+      color: #070E27; }
+    .blog-preview.scheme_light-gray .blog-preview_text {
+      color: #626A86; }
+    .blog-preview.scheme_light-gray .blog-preview_item-link {
+      background: #fff;
+      border: 1px solid #E0E4F4; }
+      .blog-preview.scheme_light-gray .blog-preview_item-link:hover {
+        border: 1px solid transparent;
+        -webkit-filter: drop-shadow(0px 35px 45px rgba(7, 14, 39, 0.05));
+                filter: drop-shadow(0px 35px 45px rgba(7, 14, 39, 0.05)); }
+    .blog-preview.scheme_light-gray .blog-preview_item-title {
+      color: #070E27; }
+    .blog-preview.scheme_light-gray .blog-preview_item-eyebrow {
+      color: #0947B5; }
+    .blog-preview.scheme_light-gray .blog-preview_item-excerpt {
       color: #626A86; }
   .blog-preview.scheme_white {
     background: #fff url("../img/promo-split-bg.svg") no-repeat top right; }
@@ -13303,8 +13320,8 @@ p.image-grid_item-descr {
     top: -204px;
     background: #00D1FF;
     opacity: 0.7;
-    -webkit-filter: blur(298.309px);
-            filter: blur(298.309px); }
+    -webkit-filter: blur(390.309px);
+            filter: blur(390.309px); }
 
 .anchor-bar {
   background: #08102A;
@@ -13390,9 +13407,9 @@ p.image-grid_item-descr {
     .use-cases.scheme_white .use-cases_item-excerpt {
       color: #626A86; }
   .use-cases.scheme_light-gray {
-    background: -webkit-gradient(linear, left top, left bottom, from(#F4F3F3), to(rgba(244, 243, 243, 0)));
-    background: -o-linear-gradient(top, #F4F3F3 0%, rgba(244, 243, 243, 0) 100%);
-    background: linear-gradient(180deg, #F4F3F3 0%, rgba(244, 243, 243, 0) 100%); }
+    background: -webkit-gradient(linear, left top, left bottom, from(#F4F3F3), to(rgba(244, 243, 243, 0))), url("../img/promo-split-bg.svg") no-repeat top right;
+    background: -o-linear-gradient(top, #F4F3F3 0%, rgba(244, 243, 243, 0) 100%), url("../img/promo-split-bg.svg") no-repeat top right;
+    background: linear-gradient(180deg, #F4F3F3 0%, rgba(244, 243, 243, 0) 100%), url("../img/promo-split-bg.svg") no-repeat top right; }
     .use-cases.scheme_light-gray .use-cases_title {
       color: #08102A; }
     .use-cases.scheme_light-gray .use-cases_text {
@@ -14578,5 +14595,41 @@ p.promo-offset_text {
   @media (min-width: 992px) {
     .heading-section {
       padding: 125px 0 50px; } }
+
+.spacer.height-tiny {
+  height: 30px; }
+
+.spacer.height-small {
+  height: 30px; }
+  @media (min-width: 768px) {
+    .spacer.height-small {
+      height: 60px; } }
+
+.spacer.height-medium {
+  height: 45px; }
+  @media (min-width: 768px) {
+    .spacer.height-medium {
+      height: 90px; } }
+
+.spacer.height-big {
+  height: 45px; }
+  @media (min-width: 768px) {
+    .spacer.height-big {
+      height: 90px; } }
+  @media (min-width: 1200px) {
+    .spacer.height-big {
+      height: 120px; } }
+
+.spacer.height-large {
+  height: 60px; }
+  @media (min-width: 768px) {
+    .spacer.height-large {
+      height: 90px; } }
+  @media (min-width: 992px) {
+    .spacer.height-large {
+      height: 120px; } }
+  @media (min-width: 1200px) {
+    .spacer.height-large {
+      height: 150px; } }
 
 /*# sourceMappingURL=main.min.css.map */
