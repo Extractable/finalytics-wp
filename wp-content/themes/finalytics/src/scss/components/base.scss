@@ -36,6 +36,12 @@ body {
 .main-content {
   overflow: hidden;
 }
+.align-center {
+  text-align: center !important;
+}
+.align-right {
+  text-align: right !important;
+}
 
 //Add responsiveness to embed video
 .embed-container {

@@ -13,28 +13,39 @@
 <section <?php if (!empty($image_grid_custom_id)): ?>id="<?php echo $image_grid_custom_id; ?>"<?php endif; ?>
     class="image-grid <?php if (get_sub_field('image_grid_color_scheme') == 'white'): ?>scheme_white<?php
     elseif (get_sub_field('image_grid_color_scheme') == 'dark_blue'): ?>scheme_dark-blue<?php endif; ?> <?php
-    if (get_sub_field("image_grid_hide_overflow")): ?>overflow-hidden<?php endif; ?>">
+    if (get_sub_field("image_grid_hide_overflow")): ?>overflow-hidden<?php endif; ?> <?php
+    if (get_sub_field('image_grid_section_style') == 'minimal'): ?>style_minimal<?php
+    elseif (get_sub_field('image_grid_section_style') == 'fancy'): ?>style_fancy<?php endif; ?>">
 
   <div class="container">
     <div class="image-grid_info">
-      <div class="row">
-        <div class="col-sm-6">
-          <h2 class="h2 image-grid_title"><?php if (get_sub_field("image_grid_title")) echo get_sub_field("image_grid_title"); ?></h2>
-          <p class="image-grid_text"><?php if (get_sub_field("image_grid_text")) echo get_sub_field("image_grid_text"); ?></p>
-        </div>
-        <div class="col-sm-6">
-          <div class="image-grid_cta">
-            <?php $image_grid_link_name = get_sub_field("image_grid_link_name");
-            if (!empty($image_grid_link_name)): ?>
-            <a href="<?php if (get_sub_field("image_grid_link_url")) echo get_sub_field("image_grid_link_url"); ?>"
-               class="btn btn-link <?php if (get_sub_field('image_grid_color_scheme') == 'white'): ?>btn-link__blue<?php endif; ?>"
-               title="<?php echo $image_grid_link_name; ?>"><span
-                  class="btn-link_text"><?php echo $image_grid_link_name; ?></span>
-            </a>
+      <?php if (get_sub_field('image_grid_section_style') == 'minimal'): ?>
+        <div class="row">
+          <div class="col-sm-6">
+            <h2 class="h2 image-grid_title"><?php if (get_sub_field("image_grid_title")) echo get_sub_field("image_grid_title"); ?></h2>
+            <p class="image-grid_text"><?php if (get_sub_field("image_grid_text")) echo get_sub_field("image_grid_text"); ?></p>
           </div>
-          <?php endif; ?>
+          <div class="col-sm-6">
+            <div class="image-grid_cta">
+              <?php $image_grid_link_name = get_sub_field("image_grid_link_name");
+              if (!empty($image_grid_link_name)): ?>
+              <a href="<?php if (get_sub_field("image_grid_link_url")) echo get_sub_field("image_grid_link_url"); ?>"
+                 class="btn btn-link <?php if (get_sub_field('image_grid_color_scheme') == 'white'): ?>btn-link__blue<?php endif; ?>"
+                 title="<?php echo $image_grid_link_name; ?>"><span
+                    class="btn-link_text"><?php echo $image_grid_link_name; ?></span>
+              </a>
+            </div>
+            <?php endif; ?>
+          </div>
         </div>
-      </div>
+      <?php elseif (get_sub_field('image_grid_section_style') == 'fancy'): ?>
+        <h2 class="h2 image-grid_title"><?php if (get_sub_field("image_grid_title")) echo get_sub_field("image_grid_title"); ?></h2>
+        <p class="image-grid_text"><?php if (get_sub_field("image_grid_text")) echo get_sub_field("image_grid_text"); ?></p>
+      <?php endif; ?>
+
+
+
+
     </div>
     <div class="image-grid_items">
       <div class="row">

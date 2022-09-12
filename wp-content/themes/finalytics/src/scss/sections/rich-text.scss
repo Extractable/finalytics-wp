@@ -1,7 +1,13 @@
 .rich-text {
-  padding: 20px 0 50px;
+  padding: 50px 0 50px;
   @include media-breakpoint-up(md){
-    padding: 20px 0 127px;
+    padding: 70px 0 70px;
+  }
+  &.scheme_white {
+    background: $white;
+  }
+  &.scheme_light-gray {
+    background: $gray4 url("../img/promo-split-bg.svg") no-repeat top right;
   }
   h2, h3, h4, h5 {
     color: $mainColor;
