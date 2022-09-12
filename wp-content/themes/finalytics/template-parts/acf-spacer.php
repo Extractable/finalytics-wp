@@ -13,6 +13,7 @@
 elseif (get_sub_field('spacer_height') == '60'): ?>height-small<?php
 elseif (get_sub_field('spacer_height') == '90'): ?>height-medium<?php
 elseif (get_sub_field('spacer_height') == '120'): ?>height-big<?php
-elseif (get_sub_field('spacer_height') == '150'): ?>height-large<?php endif; ?>">
+elseif (get_sub_field('spacer_height') == '150'): ?>height-large<?php endif; ?>" style="background-color: <?php
+if (get_sub_field("spacer_background_color")) echo get_sub_field("spacer_background_color"); ?>">
 </div>
 

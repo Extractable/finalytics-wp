@@ -10734,6 +10734,12 @@ body {
 .main-content {
   overflow: hidden; }
 
+.align-center {
+  text-align: center !important; }
+
+.align-right {
+  text-align: right !important; }
+
 .embed-container {
   position: relative;
   padding-bottom: 56.25%;
@@ -12145,7 +12151,10 @@ body {
                 filter: blur(418px); } }
   .hero-media.scheme-dark {
     background: #08102A; }
-    .hero-media.scheme-dark:before {
+    .hero-media.scheme-dark.bg-dotted:before {
+      height: 100%;
+      background: url("../img/hero-small-bg-dotted.svg") repeat; }
+    .hero-media.scheme-dark.bg-waves:before {
       background: url("../img/hero-media-bg.svg") no-repeat top left; }
     .hero-media.scheme-dark .hero-media_eyebrow {
       color: #C1C4CE; }
@@ -12988,56 +12997,117 @@ p.stats-text {
   position: relative;
   z-index: 2; }
 
-.image-grid {
+.image-grid.scheme_white {
+  color: #626A86; }
+  .image-grid.scheme_white .image-grid_title {
+    color: #08102A; }
+  .image-grid.scheme_white .image-grid_item-link {
+    color: #626A86; }
+    .image-grid.scheme_white .image-grid_item-link:hover {
+      color: #0947B5; }
+
+.image-grid.scheme_dark-blue {
+  background: #08102A;
+  color: #C1C4CE; }
+  .image-grid.scheme_dark-blue .image-grid_title {
+    color: #fff; }
+  .image-grid.scheme_dark-blue .image-grid_item-link {
+    color: #C1C4CE; }
+    .image-grid.scheme_dark-blue .image-grid_item-link:hover {
+      color: #fff; }
+
+.image-grid.style_fancy {
+  padding: 50px 0 45px; }
+  @media (min-width: 768px) {
+    .image-grid.style_fancy {
+      padding: 80px 0 70px; } }
+  @media (min-width: 992px) {
+    .image-grid.style_fancy {
+      padding: 120px 0 105px; } }
+  .image-grid.style_fancy .image-grid_title {
+    margin-bottom: 40px;
+    text-align: center; }
+    @media (min-width: 768px) {
+      .image-grid.style_fancy .image-grid_title {
+        margin-bottom: 80px; } }
+  .image-grid.style_fancy.scheme_dark-blue {
+    position: relative;
+    background: #08102A url("../img/footer-bg.svg") no-repeat bottom left; }
+    .image-grid.style_fancy.scheme_dark-blue .decor-element {
+      display: block; }
+  .image-grid.style_fancy .image-grid_items .row {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    @media (min-width: 768px) {
+      .image-grid.style_fancy .image-grid_items .row {
+        max-width: 890px;
+        margin: 0 auto; } }
+  .image-grid.style_fancy .image-grid_items .col {
+    width: 50%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    margin-bottom: 20px; }
+    @media (min-width: 768px) {
+      .image-grid.style_fancy .image-grid_items .col {
+        width: 33.333%;
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 33.333%;
+                flex: 0 0 33.333%;
+        margin-bottom: 60px; } }
+
+.image-grid.style_minimal {
   padding: 30px 0 40px; }
   @media (min-width: 768px) {
-    .image-grid {
+    .image-grid.style_minimal {
       padding: 50px 0 70px; } }
   @media (min-width: 992px) {
-    .image-grid {
+    .image-grid.style_minimal {
       padding: 70px 0 90px; } }
-  .image-grid.scheme_white {
-    color: #626A86; }
-    .image-grid.scheme_white .image-grid_title {
-      color: #08102A; }
-    .image-grid.scheme_white .image-grid_item-link {
-      color: #626A86; }
-      .image-grid.scheme_white .image-grid_item-link:hover {
-        color: #0947B5; }
-  .image-grid.scheme_dark-blue {
-    background: #08102A;
-    color: #C1C4CE; }
-    .image-grid.scheme_dark-blue .image-grid_title {
-      color: #fff; }
-    .image-grid.scheme_dark-blue .image-grid_item-link {
-      color: #C1C4CE; }
-      .image-grid.scheme_dark-blue .image-grid_item-link:hover {
-        color: #fff; }
+  .image-grid.style_minimal .image-grid_title {
+    margin-bottom: 17px; }
+  .image-grid.style_minimal .image-grid_items .row {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    @media (min-width: 768px) {
+      .image-grid.style_minimal .image-grid_items .row {
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start; } }
+  .image-grid.style_minimal .image-grid_items .col {
+    width: 50%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%; }
+    @media (min-width: 768px) {
+      .image-grid.style_minimal .image-grid_items .col {
+        width: 20%;
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 20%;
+                flex: 0 0 20%; } }
 
-.image-grid_items .row {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
-  @media (min-width: 768px) {
-    .image-grid_items .row {
-      -webkit-box-pack: start;
-          -ms-flex-pack: start;
-              justify-content: flex-start; } }
+.image-grid .decor-element {
+  display: none;
+  position: absolute;
+  width: 457.92px;
+  height: 359px;
+  right: 0;
+  bottom: 0;
+  background: #00D1FF;
+  opacity: 0.7;
+  -webkit-filter: blur(290.309px);
+          filter: blur(290.309px);
+  z-index: 0; }
 
-.image-grid_items .col {
-  width: 50%;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%; }
-  @media (min-width: 768px) {
-    .image-grid_items .col {
-      width: 20%;
-      -webkit-box-flex: 0;
-          -ms-flex: 0 0 20%;
-              flex: 0 0 20%; } }
+.image-grid_info {
+  position: relative;
+  z-index: 1; }
 
-.image-grid_title {
-  margin-bottom: 17px; }
+.image-grid_items {
+  position: relative;
+  z-index: 1; }
 
 p.image-grid_text {
   font-size: 18px;
@@ -14007,10 +14077,14 @@ p.promo-offset_text {
           background: #00a3ff; }
 
 .rich-text {
-  padding: 20px 0 50px; }
+  padding: 50px 0 50px; }
   @media (min-width: 768px) {
     .rich-text {
-      padding: 20px 0 127px; } }
+      padding: 70px 0 70px; } }
+  .rich-text.scheme_white {
+    background: #fff; }
+  .rich-text.scheme_light-gray {
+    background: #FBFBFB url("../img/promo-split-bg.svg") no-repeat top right; }
   .rich-text h2, .rich-text h3, .rich-text h4, .rich-text h5 {
     color: #08102A;
     font-family: "Red Hat Display", sans-serif;
