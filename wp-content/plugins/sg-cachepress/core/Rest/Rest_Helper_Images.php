@@ -52,7 +52,7 @@ class Rest_Helper_Images extends Rest_Helper {
 			self::send_json_success( Message_Service::get_response_message( 1, 'image_compression_settings', null ), $response_data );
 		}
 
-		// Proceed with compressing the img, if compress_existing is set.
+		// Proceed with compressing the images, if compress_existing is set.
 		if ( 0 !== intval( $maybe_compress_existing ) ) {
 			$this->images_optimizer->reset_image_optimization_status();
 
@@ -101,7 +101,7 @@ class Rest_Helper_Images extends Rest_Helper {
 	}
 
 	/**
-	 * Deletes img meta_key flag to allow reoptimization.
+	 * Deletes images meta_key flag to allow reoptimization.
 	 *
 	 * @since  5.0.0
 	 */
@@ -138,7 +138,7 @@ class Rest_Helper_Images extends Rest_Helper {
 	}
 
 	/**
-	 * Optimizes the preview image and returns the URLs for both the optimized and the original img.
+	 * Optimizes the preview image and returns the URLs for both the optimized and the original images.
 	 *
 	 * @since @version
 	 *
@@ -152,7 +152,7 @@ class Rest_Helper_Images extends Rest_Helper {
 		self::send_json_success(
 			'',
 			array(
-				'img' => $this->images_optimizer->get_preview_images( $id ),
+				'images' => $this->images_optimizer->get_preview_images( $id ),
 			)
 		);
 	}

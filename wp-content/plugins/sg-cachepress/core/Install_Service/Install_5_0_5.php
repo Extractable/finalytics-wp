@@ -20,7 +20,7 @@ class Install_5_0_5 extends Install {
 	 * @since 5.0.5
 	 */
 	public function install() {
-		// Reset endless running compatibility checks and img optimization.
+		// Reset endless running compatibility checks and images optimization.
 		wp_clear_scheduled_hook( 'siteground_optimizer_start_test_cron' );
 		wp_clear_scheduled_hook( 'siteground_optimizer_start_image_optimization_cron' );
 

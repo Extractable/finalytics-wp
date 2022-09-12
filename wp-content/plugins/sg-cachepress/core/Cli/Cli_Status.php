@@ -38,7 +38,7 @@ class Cli_Status {
 	 *  - querystring
 	 *  - emojis
 	 *  - webp
-	 *  - lazyload-img
+	 *  - lazyload-images
 	 *  - memcache
 	 *  - ssl
 	 *  - ssl-fix
@@ -84,7 +84,7 @@ class Cli_Status {
 			'combine-css'                  => 'siteground_optimizer_combine_css',
 			'querystring'                  => 'siteground_optimizer_remove_query_strings',
 			'emojis'                       => 'siteground_optimizer_disable_emojis',
-			'lazyload-img'              => 'siteground_optimizer_lazyload_images',
+			'lazyload-images'              => 'siteground_optimizer_lazyload_images',
 			'ssl'                          => 'siteground_optimizer_ssl_enabled',
 			'google-fonts'                 => 'siteground_optimizer_optimize_web_fonts',
 			'combine-js'                   => 'siteground_optimizer_combine_javascript',

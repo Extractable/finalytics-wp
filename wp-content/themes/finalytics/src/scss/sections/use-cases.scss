@@ -76,7 +76,7 @@
     }
   }
   &.scheme_light-gray {
-    background: linear-gradient(180deg, #F4F3F3 0%, rgba(244, 243, 243, 0) 100%);
+    background: linear-gradient(180deg, #F4F3F3 0%, rgba(244, 243, 243, 0) 100%), url("../img/promo-split-bg.svg") no-repeat top right;
     .use-cases_title {
       color: $mainColor;
     }

@@ -1,7 +1,13 @@
 .rich-text {
-  padding: 20px 0 50px;
+  padding: 50px 0 50px;
   @include media-breakpoint-up(md){
-    padding: 20px 0 127px;
+    padding: 70px 0 70px;
+  }
+  &.scheme_white {
+    background: $white;
+  }
+  &.scheme_light-gray {
+    background: $gray4 url("../img/promo-split-bg.svg") no-repeat top right;
   }
   h2, h3, h4, h5 {
     color: $mainColor;
@@ -55,7 +61,8 @@
   }
   p {
     color: $blue-gray;
-    font-weight: $fw-medium;
+    //font-weight: $fw-medium;
+    font-weight: $fw-regular;
     font-size: $fs-md;
     line-height: 1.4;
     margin-bottom: 23px;
@@ -72,7 +79,8 @@
     margin: 0 15px 15px 0;
   }
   ol, ul {
-    margin: 0;
+    //margin: 0;
+    margin: 0 0 20px 0;
     padding: 0 0 0 27px;
     li {
       margin-bottom: 12px;
@@ -96,7 +104,7 @@
     }
     p {
       font-family: $ff-title;
-      font-weight: $fw-medium;
+      font-weight: $fw-regular;
       font-size: 25px;
       line-height: 1.3;
       letter-spacing: 0.1px;

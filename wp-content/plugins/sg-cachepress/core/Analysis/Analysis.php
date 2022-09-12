@@ -59,10 +59,10 @@ class Analysis {
 			'duplicated-javascript',
 		),
 		'media_optimizations' => array(
-			'uses-responsive-img',
-			'offscreen-img',
-			'uses-optimized-img',
-			'uses-webp-img',
+			'uses-responsive-images',
+			'offscreen-images',
+			'uses-optimized-images',
+			'uses-webp-images',
 			'efficient-animated-content',
 			'non-composited-animations',
 			'third-party-facades',
@@ -382,10 +382,10 @@ class Analysis {
 					'message' => __( 'WebP is a next generation image format supported by modern browsers which greatly reduces the size of standard image formats while keeping the same quality. Almost all current browsers work with WebP.', 'sg-cachepress' ),
 				),
 			),
-			'offscreen-img' => array(
+			'offscreen-images' => array(
 				'lazyload_images' => array(
 					'title' => __( 'Lazy Load Media', 'sg-cachepress' ),
-					'message' => __( 'Load img only when they are visible in the browser.', 'sg-cachepress' ),
+					'message' => __( 'Load images only when they are visible in the browser.', 'sg-cachepress' ),
 				),
 			),
 			'unused-css-rules' => array(

@@ -13,6 +13,7 @@
     padding: 61px 0 31px;
   }
 }
+
 .custom-single_meta {
   justify-content: space-between;
   @include media-breakpoint-up(md){
@@ -36,4 +37,28 @@
       }
     }
   }
+}
+
+.single-post {
+    .custom-single_wrap {
+        background: none;
+        padding: 50px 0 0;
+    }
+
+    .cat-links {
+        font-size: $fs-rg;
+        a {
+            font-size: $fs-rg;
+        }
+    }
+
+    .rich-text_content {
+        a {
+            color: $blue;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
 }

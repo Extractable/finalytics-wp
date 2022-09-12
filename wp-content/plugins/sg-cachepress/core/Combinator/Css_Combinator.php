@@ -277,7 +277,7 @@ class Css_Combinator extends Abstract_Combinator {
 			$content = $this->check_for_imports( $content, $url );
 			// Change font-display to swap.
 			$content = $this->swap_font_display( $content );
-			// Remove src maps urls.
+			// Remove source maps urls.
 			$content = preg_replace(
 				'~^(\/\/|\/\*)(#|@)\s(sourceURL|sourceMappingURL)=(.*)(\*\/)?$~m',
 				'',

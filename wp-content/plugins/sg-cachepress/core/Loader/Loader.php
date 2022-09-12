@@ -510,7 +510,7 @@ class Loader {
 	}
 
 	/**
-	 * Add img optimization hooks.
+	 * Add images optimization hooks.
 	 *
 	 * @since 5.9.0
 	 */
@@ -519,7 +519,7 @@ class Loader {
 		// Get the resize_images option and apply filters to check the set value.
 		$resize_images = apply_filters( 'sgo_set_max_image_width', intval( get_option( 'siteground_optimizer_resize_images', 2560 ) ) );
 
-		// Resize newly uploaded img, if different than default.
+		// Resize newly uploaded images, if different than default.
 		if ( 2560 !== $resize_images ) {
 			add_filter( 'big_image_size_threshold', array( $this->images_optimizer, 'resize' ) );
 		}
@@ -533,7 +533,7 @@ class Loader {
 		add_action( 'wp_ajax_nopriv_siteground_optimizer_start_image_optimization', array( $this->images_optimizer, 'start_optimization' ) );
 		add_action( 'siteground_optimizer_start_image_optimization_cron', array( $this->images_optimizer, 'start_optimization' ) );
 
-		// Optimize newly uploaded img.
+		// Optimize newly uploaded images.
 		if ( '0' !== get_option( 'siteground_optimizer_compression_level', '0' ) ) {
 			add_action( 'delete_attachment', array( $this->images_optimizer, 'delete_backups' ) );
 			add_action( 'wp_generate_attachment_metadata', array( $this->images_optimizer, 'optimize_new_image' ), 10, 2 );
@@ -546,7 +546,7 @@ class Loader {
 	}
 
 	/**
-	 * Add webp img optimization hooks.
+	 * Add webp images optimization hooks.
 	 *
 	 * @since 5.9.0
 	 */
@@ -555,7 +555,7 @@ class Loader {
 		add_action( 'wp_ajax_siteground_optimizer_start_webp_conversion', array( $this->images_optimizer_webp, 'start_optimization' ) );
 		add_action( 'siteground_optimizer_start_webp_conversion_cron', array( $this->images_optimizer_webp, 'start_optimization' ) );
 
-		// Optimize newly uploaded img.
+		// Optimize newly uploaded images.
 		if ( Options::is_enabled( 'siteground_optimizer_webp_support' ) ) {
 			add_action( 'delete_attachment', array( $this->images_optimizer_webp, 'delete_webp_copy' ) );
 			add_action( 'edit_attachment', array( $this->images_optimizer_webp, 'regenerate_webp_copy' ) );

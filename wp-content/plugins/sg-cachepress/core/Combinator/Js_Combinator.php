@@ -690,7 +690,7 @@ class Js_Combinator extends Abstract_Combinator {
 	 */
 	public function parse( $scripts ) {
 		foreach ( $scripts as $script ) {
-			// Try to get the src of the script.
+			// Try to get the source of the script.
 			preg_match(
 				/**
 				Build the regular expression.
@@ -716,7 +716,7 @@ class Js_Combinator extends Abstract_Combinator {
 	 *
 	 * @since  5.5.0
 	 *
-	 * @param  string $src Script src attribute.
+	 * @param  string $src Script source attribute.
 	 *
 	 * @return string      Script content.
 	 */
@@ -826,7 +826,7 @@ class Js_Combinator extends Abstract_Combinator {
 	 *
 	 * @since  5.5.0
 	 *
-	 * @param  string  $src      Script src.
+	 * @param  string  $src      Script source.
 	 * @param  boolean $external Whether the script is external.
 	 *
 	 * @return boolean     True if the script is excluded, false otherwise.

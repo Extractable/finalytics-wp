@@ -32,7 +32,11 @@
         ?>
         <?php if( $the_query->have_posts() ): ?>
           <?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>
-          <div class="col-md-4">
+          <?php if ($number_posts % 4 == 0): ?>
+            <div class="col-md-3">
+          <?php elseif ($number_posts % 3 == 0): ?>
+            <div class="col-md-4">
+            <?php endif; ?>
             <a class="use-cases_item-link" href="<?php the_permalink(); ?>">
               <div class="use-cases_item-thumb"><?php $use_case_post_icon = get_field('use_case_post_icon');
               if (!empty($use_case_post_icon)): ?>

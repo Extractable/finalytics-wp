@@ -13,7 +13,9 @@
 <section <?php if (!empty($image_grid_custom_id)): ?>id="<?php echo $image_grid_custom_id; ?>"<?php endif; ?>
     class="image-grid <?php if (get_field('image_grid_color_scheme') == 'white'): ?>scheme_white<?php
     elseif (get_field('image_grid_color_scheme') == 'dark_blue'): ?>scheme_dark-blue<?php endif; ?> <?php
-    if (get_field("image_grid_hide_overflow")): ?>overflow-hidden<?php endif; ?>">
+    if (get_field("image_grid_hide_overflow")): ?>overflow-hidden<?php endif; ?> <?php
+    if (get_field('image_grid_section_style') == 'minimal'): ?>style_minimal<?php
+    elseif (get_field('image_grid_section_style') == 'fancy'): ?>style_fancy<?php endif; ?>">
   <div class="container">
     <div class="image-grid_info">
       <div class="row">

@@ -47,7 +47,7 @@ class Cli_Optimizer {
 	 *  - backup-media
 	 *  - lazyload
 	 *  - webp
-	 *  - resize-img
+	 *  - resize-images
 	 *  - web-fonts
 	 *  - fix-insecure-content
 	 *  - database-optimization
@@ -81,7 +81,7 @@ class Cli_Optimizer {
 			case 'web-fonts':
 			case 'webp':
 			case 'backup-media':
-			case 'resize-img':
+			case 'resize-images':
 			case 'fix-insecure-content':
 			case 'lazyload':
 			case 'preload-combined-css':
@@ -139,7 +139,7 @@ class Cli_Optimizer {
 			'emojis'               => 'siteground_optimizer_disable_emojis',
 			'backup-media'         => 'siteground_optimizer_backup_media',
 			'webp'                 => 'siteground_optimizer_webp_support',
-			'resize-img'        => 'siteground_optimizer_resize_images',
+			'resize-images'        => 'siteground_optimizer_resize_images',
 			'fix-insecure-content' => 'siteground_optimizer_fix_insecure_content',
 			'preload-combined-css' => 'siteground_optimizer_preload_combined_css',
 			'lazyload'             => 'siteground_optimizer_lazyload_images',

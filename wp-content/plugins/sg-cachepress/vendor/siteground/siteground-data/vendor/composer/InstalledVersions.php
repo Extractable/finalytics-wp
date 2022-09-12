@@ -7,7 +7,7 @@
  *     Jordi Boggiano <j.boggiano@seld.be>
  *
  * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this src code.
+ * file that was distributed with this source code.
  */
 
 namespace Composer;
@@ -250,7 +250,7 @@ class InstalledVersions
 
         if (null === self::$installed) {
             // only require the installed.php file if this file is loaded from its dumped location,
-            // and not from its src location in the composer/composer package, see https://github.com/composer/composer/issues/9937
+            // and not from its source location in the composer/composer package, see https://github.com/composer/composer/issues/9937
             if (substr(__DIR__, -8, 1) !== 'C') {
                 self::$installed = include __DIR__ . '/installed.php';
             } else {
@@ -323,7 +323,7 @@ class InstalledVersions
 
         if (null === self::$installed) {
             // only require the installed.php file if this file is loaded from its dumped location,
-            // and not from its src location in the composer/composer package, see https://github.com/composer/composer/issues/9937
+            // and not from its source location in the composer/composer package, see https://github.com/composer/composer/issues/9937
             if (substr(__DIR__, -8, 1) !== 'C') {
                 self::$installed = require __DIR__ . '/installed.php';
             } else {

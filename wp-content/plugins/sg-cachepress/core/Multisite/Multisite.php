@@ -20,7 +20,7 @@ class Multisite {
 		return array(
 			'supercacher' => (int) get_site_option( 'siteground_optimizer_supercacher_permissions', 1 ),
 			'frontend'    => (int) get_site_option( 'siteground_optimizer_frontend_permissions', 1 ),
-			'img'      => (int) get_site_option( 'siteground_optimizer_images_permissions', 1 ),
+			'images'      => (int) get_site_option( 'siteground_optimizer_images_permissions', 1 ),
 			'environment' => (int) get_site_option( 'siteground_optimizer_environment_permissions', 0 ),
 			'analytics'   => (int) get_site_option( 'siteground_optimizer_analytics_permissions', 1 ),
 		);
@@ -239,7 +239,7 @@ class Multisite {
 	}
 
 	/**
-	 * Enable img optimization for blog.
+	 * Enable images optimization for blog.
 	 *
 	 * @since  5.0.0
 	 *
@@ -263,7 +263,7 @@ class Multisite {
 	}
 
 	/**
-	 * Disable img optimization for blog.
+	 * Disable images optimization for blog.
 	 *
 	 * @since  5.0.0
 	 *

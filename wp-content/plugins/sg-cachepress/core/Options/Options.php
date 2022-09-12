@@ -245,11 +245,11 @@ class Options {
 	}
 
 	/**
-	 * Checks if there are unoptimized img.
+	 * Checks if there are unoptimized images.
 	 *
 	 * @since  5.9.0
 	 *
-	 * @return int The count of unoptimized img.
+	 * @return int The count of unoptimized images.
 	 */
 	public static function check_for_unoptimized_images( $type ) {
 
@@ -271,7 +271,7 @@ class Options {
 				'posts_per_page' => -1,
 				'fields'         => 'ids',
 				'meta_query'     => array(
-					// Skip optimized img.
+					// Skip optimized images.
 					array(
 						'key'     => $meta[ $type ][0],
 						'compare' => 'NOT EXISTS',
@@ -289,11 +289,11 @@ class Options {
 	}
 
 	/**
-	 * Checks if there are any img in the library.
+	 * Checks if there are any images in the library.
 	 *
 	 * @since  5.3.5
 	 *
-	 * @return int 1 if thre are any img in the lib, 0 otherwise.
+	 * @return int 1 if thre are any images in the lib, 0 otherwise.
 	 */
 	public function check_for_images() {
 		$images = get_posts(
