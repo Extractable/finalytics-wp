@@ -10,31 +10,97 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+	<main id="primary" class="site-main <?php if (get_field('blog_post_color_scheme') == 'light_gray'): ?>scheme_light-gray<?php
+    elseif (get_field('blog_post_color_scheme') == 'white'): ?>scheme_white<?php endif; ?>">
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+		<!-- Hero -->
+		<?php $hero_small_custom_id = get_field("hero_small_custom_id"); ?>
+		<section <?php if (!empty($hero_small_custom_id)): ?>id="<?php echo $hero_small_custom_id; ?>"<?php endif; ?>
+		         class="hero-small <?php if( get_field('hero_small_color_scheme') == 'light' ): ?>scheme-light<?php else: ?>scheme-dark<?php endif; ?> <?php
+		         if (get_field("hero_small_hide_overflow")): ?>overflow-hidden<?php endif; ?>">
+		  <div class="container-xl">
 
-			get_template_part( 'template-parts/content', get_post_type() );
+		    <div class="hero-small_content">
+		        <span
+		            class="hero-small_eyebrow"><?php if (get_field("hero_small_eyebrow")) echo get_field("hero_small_eyebrow"); ?></span>
+		      <h1 class="h1-small hero-small_title"><?php if (get_field("hero_small_title")) echo get_field("hero_small_title"); ?></h1>
+		      <p class="hero-small_text"><?php if (get_field("hero_small_text")) echo get_field("hero_small_text"); ?></p>
+		      <div class="hero-small_cta">
+		        <?php
+		        $hero_small_button_1 = get_field('hero_small_button_1');
+		        if ($hero_small_button_1):
+		          $link_url = $hero_small_button_1['url'];
+		          $link_title = $hero_small_button_1['title'];
+		          ?>
+		          <?php if (get_field('hero_small_button_1_style') == 'primary'): ?>
+		          <a class="btn btn-primary"
+		             href="<?php echo esc_url($link_url); ?>"
+		             title="<?php echo esc_html($link_title); ?>"><?php echo esc_html($link_title); ?></a>
+		        <?php else: ?>
+		          <a class="btn btn-link <?php if (get_field('hero_small_color_scheme') == 'light'): ?>btn-link__blue<?php endif; ?>"
+		             href="<?php echo esc_url($link_url); ?>"
+		             title="<?php echo esc_html($link_title); ?>"><span
+		                class="btn-link_text"><?php echo esc_html($link_title); ?></span></a>
+		        <?php endif; ?>
+		        <?php endif; ?>
 
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'finalytics' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'finalytics' ) . '</span> <span class="nav-title">%title</span>',
-				)
-			);
+		        <?php
+		        $hero_small_button_2 = get_field('hero_small_button_2');
+		        if ($hero_small_button_2):
+		          $link_url = $hero_small_button_2['url'];
+		          $link_title = $hero_small_button_2['title'];
+		          ?>
+		          <?php if (get_field('hero_small_button_2_style') == 'primary'): ?>
+		          <a class="btn btn-primary"
+		             href="<?php echo esc_url($link_url); ?>"
+		             title="<?php echo esc_html($link_title); ?>"><?php echo esc_html($link_title); ?></a>
+		        <?php else: ?>
+		          <a class="btn btn-link <?php if (get_field('hero_small_color_scheme') == 'light'): ?>btn-link__blue<?php endif; ?>"
+		             href="<?php echo esc_url($link_url); ?>"
+		             title="<?php echo esc_html($link_title); ?>"><span
+		                class="btn-link_text"><?php echo esc_html($link_title); ?></span></a>
+		        <?php endif; ?>
+		        <?php endif; ?>
+		      </div>
+		    </div>
+		  </div>
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
 
-		endwhile; // End of the loop.
-		?>
+		  <div class="decor-element"></div>
+		</section>
+		<!-- /Hero -->
+
+		<div class="custom-single_wrap">
+	      <div class="container-fluid">
+	        <div class="custom-single_meta">
+					<div class="entry-meta">
+  				<?php finalytics_entry_footer(); ?>
+  			  </div><!-- .entry-meta -->
+			  <div class="widget-right">
+				<?php dynamic_sidebar('sidebar-9'); ?>
+			  </div>
+	        </div>
+	      </div>
+	    </div>
+
+		<!-- Post Content -->
+		<section class="rich-text">
+		  <div class="container-fluid">
+		    <div class="rich-text_content">
+				<?php while ( have_posts() ) : the_post(); ?>
+
+
+					<?php the_content(); ?>
+
+	    		<?php endwhile; // End of the loop. ?>
+		    </div>
+		  </div>
+		</section>
+		<!-- /Post Content -->
+
+
 
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();
