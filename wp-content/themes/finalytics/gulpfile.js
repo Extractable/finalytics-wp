@@ -6,17 +6,17 @@ const {
 	parallel,
 	watch
 } = require( 'gulp' )
-const browserSync	= require( 'browser-sync' ).create()
+//const browserSync	= require( 'browser-sync' ).create()
 const concat		= require( 'gulp-concat' )
 const uglify		= require( 'gulp-uglify-es' ).default
 const rigger		= require( 'gulp-rigger' )
-const sass			= require( 'gulp-sass' )
+const sass			= require('gulp-sass')(require('sass'))
 const autoprefixer	= require( 'gulp-autoprefixer' )
 const cleancss		= require( 'gulp-clean-css' )
 const sourcemaps	= require( 'gulp-sourcemaps' )
-const imagemin		= require( 'gulp-imagemin' )
+//const imagemin		= require( 'gulp-imagemin' )
 const newer			= require( 'gulp-newer' )
-const del			= require( 'del' )
+//const del			= require( 'del' )
 
 /**
  * ! IMPORTANT - Change value to your local domain name.
@@ -43,7 +43,7 @@ function scripts(){
 		.pipe( uglify() )					// Process.
 		.pipe( sourcemaps.write( '.' ) )	// Write source maps.
 		.pipe( dest( 'static/js/' ) )		// Output.
-		.pipe( browserSync.stream() )		// Trigger browserSync.
+		//.pipe( browserSync.stream() )		// Trigger browserSync.
 }
 
 // Scripts bundle build version.
@@ -68,7 +68,7 @@ function styles(){
 		} ) )											// Add prefixes.
 		.pipe( sourcemaps.write( '.' ) )				// Write source maps.
 		.pipe( dest( 'static/css/' ) )					// Output.
-		.pipe( browserSync.stream() )					// Trigger browserSync.
+		//.pipe( browserSync.stream() )					// Trigger browserSync.
 }
 
 // Styles bundle build version.
@@ -106,21 +106,21 @@ function clean(){
 function startwatch(){
 	watch( 'src/scss/**/*', styles )
 	watch( ['src/js/**/*.js'], scripts )
-	watch( '**/*.php' ).on( 'change', browserSync.reload )
-	watch( 'src/**/*', images )
+	//watch( '**/*.php' ).on( 'change', browserSync.reload )
+	//watch( 'src/**/*', images )
 }
 
 // Export all functions to run by default or single.
-exports.browsersync		= browsersync;
+//exports.browsersync		= browsersync;
 exports.scripts			= scripts;
 exports.buildScripts	= buildScripts;
 exports.styles			= styles;
 exports.buildStyles		= buildStyles;
-exports.images			= images;
-exports.clean			= clean;
+//exports.images			= images;
+//exports.clean			= clean;
 
 // Use 'gulp' command to run them all parallel.
-exports.default = parallel( scripts, styles, images, browsersync, startwatch );
+exports.default = parallel( scripts, styles, startwatch );
 
 // Use 'gulp build' command to run build for production (destination files are the same).
-exports.build = series( clean, buildScripts, buildStyles, images );
+exports.build = series( buildScripts, buildStyles );

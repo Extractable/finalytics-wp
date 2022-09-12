@@ -61,7 +61,8 @@
   }
   p {
     color: $blue-gray;
-    font-weight: $fw-medium;
+    //font-weight: $fw-medium;
+    font-weight: $fw-regular;
     font-size: $fs-md;
     line-height: 1.4;
     margin-bottom: 23px;
@@ -78,7 +79,8 @@
     margin: 0 15px 15px 0;
   }
   ol, ul {
-    margin: 0;
+    //margin: 0;
+    margin: 0 0 20px 0;
     padding: 0 0 0 27px;
     li {
       margin-bottom: 12px;
@@ -102,7 +104,7 @@
     }
     p {
       font-family: $ff-title;
-      font-weight: $fw-medium;
+      font-weight: $fw-regular;
       font-size: 25px;
       line-height: 1.3;
       letter-spacing: 0.1px;
