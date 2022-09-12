@@ -18,6 +18,7 @@
          elseif (get_sub_field('blog_preview_color_scheme') == 'light_gray'): ?>scheme_light-gray<?php endif; ?> <?php
          if (get_sub_field("blog_preview_overflow")): ?>overflow-hidden<?php endif; ?>">
   <div class="decor-element"></div>
+
   <div class="container">
     <div class="blog-preview_content">
       <h2 class="h2 blog-preview_title"><?php if (get_sub_field("blog_preview_title")) echo get_sub_field("blog_preview_title"); ?></h2>

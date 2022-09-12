@@ -31,18 +31,26 @@
         $the_query = new WP_Query( $args );
         ?>
         <?php if( $the_query->have_posts() ): ?>
-          <?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>
-            <div class="col-md-4">
-              <a class="use-cases_item-link" href="<?php the_permalink(); ?>">
-                <div class="use-cases_item-thumb"><?php if (get_field("use_case_post_icon")) echo get_field("use_case_post_icon"); ?></div>
-                <h4 class="h4 use-cases_item-title"><?php the_title(); ?></h4>
-                <div class="use-cases_item-excerpt"><?php the_excerpt(); ?></div>
-              </a>
-            </div>
+        <?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>
+        <?php if ($number_posts % 4 == 0): ?>
+        <div class="col-md-3">
+          <?php elseif ($number_posts % 3 == 0): ?>
+          <div class="col-md-4">
+            <?php endif; ?>
+            <a class="use-cases_item-link" href="<?php the_permalink(); ?>">
+              <div class="use-cases_item-thumb"><?php $use_case_post_icon = get_field('use_case_post_icon');
+                if (!empty($use_case_post_icon)): ?>
+                  <img src="<?php echo $use_case_post_icon['url']; ?>"
+                       alt="<?php echo $use_case_post_icon['alt']; ?>"/>
+                <?php endif; ?></div>
+              <h4 class="h4 use-cases_item-title"><?php the_title(); ?></h4>
+              <div class="use-cases_item-excerpt"><?php the_excerpt(); ?></div>
+            </a>
+          </div>
           <?php endwhile; ?>
-        <?php endif; ?>
-        <?php wp_reset_query();	 // Restore global post data stomped by the_post(). ?>
+          <?php endif; ?>
+          <?php wp_reset_query();	 // Restore global post data stomped by the_post(). ?>
+        </div>
       </div>
     </div>
-  </div>
 </section>

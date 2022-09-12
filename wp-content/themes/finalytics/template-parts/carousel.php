@@ -25,6 +25,7 @@
           <li class="carousel-two-col__slide <?php if (get_sub_field('carousel_item_image_position') == 'right'): ?>image-right<?php else: ?>image-left<?php endif; ?>">
             <div class="row no-gutters">
               <div class="col-12 col-md-6">
+
                 <div class="carousel-two-col__slide-media">
                   <?php if (get_sub_field('carousel_item_image_or_video') == 'video'): ?>
                     <div class="embed-container">

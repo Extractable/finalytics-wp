@@ -10,9 +10,10 @@
 ?>
 
 <?php $media_custom_id = get_sub_field("media_custom_id"); ?>
-<section <?php if (!empty($media_custom_id)): ?>id="<?php echo $media_custom_id; ?>"<?php endif; ?> class="media <?php if (get_sub_field('media_color_scheme') == 'white'): ?>scheme_white<?php
-                            elseif (get_sub_field('media_color_scheme') == 'dark_blue'): ?>scheme_dark-blue<?php endif; ?> <?php
-if (get_sub_field("media_hide_overflow")): ?>overflow-hidden<?php endif; ?>">
+<section <?php if (!empty($media_custom_id)): ?>id="<?php echo $media_custom_id; ?>"<?php endif; ?>
+         class="media <?php if (get_sub_field('media_color_scheme') == 'white'): ?>scheme_white<?php
+         elseif (get_sub_field('media_color_scheme') == 'dark_blue'): ?>scheme_dark-blue<?php endif; ?> <?php
+         if (get_sub_field("media_hide_overflow")): ?>overflow-hidden<?php endif; ?>">
 
   <div class="container">
     <div class="media_content">
@@ -20,16 +21,14 @@ if (get_sub_field("media_hide_overflow")): ?>overflow-hidden<?php endif; ?>">
       <p class="media_image-text"><?php if (get_sub_field("media_text")) echo get_sub_field("media_text"); ?></p>
       <?php
       $media_link = get_sub_field('media_link');
-      if( $media_link ):
+      if ($media_link):
         $link_url = $media_link['url'];
         $link_title = $media_link['title'];
-        $link_target = $media_link['target'] ? $media_link['target'] : '_self';
         ?>
 
         <a class="btn btn-link <?php if (get_sub_field('media_color_scheme') == 'white'): ?>btn-link__blue<?php endif; ?>"
-           href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"
-           title="<?php echo esc_html( $link_title ); ?>"><span
-              class="btn-link_text"><?php echo esc_html( $link_title ); ?></span></a>
+           href="<?php echo esc_url($link_url); ?>" title="<?php echo esc_html($link_title); ?>"><span
+              class="btn-link_text"><?php echo esc_html($link_title); ?></span></a>
       <?php endif; ?>
     </div>
     <div class="media_holder">

@@ -12,8 +12,7 @@
 <?php $quote_custom_id = get_field("quote_custom_id"); ?>
 <section <?php if (!empty($quote_custom_id)): ?>id="<?php echo $quote_custom_id; ?>"<?php endif; ?>
          class="quote <?php if (get_field('quote_color_scheme') == 'white'): ?>scheme_white<?php
-         elseif (get_field('quote_color_scheme') == 'dark_blue'): ?>scheme_dark-blue<?php endif; ?>
-         <?php if (get_field("hide_overflow")): ?>overflow-hidden<?php endif; ?> <?php
+         elseif (get_field('quote_color_scheme') == 'dark_blue'): ?>scheme_dark-blue<?php endif; ?><?php
          if (get_field("quote_hide_overflow")): ?>overflow-hidden<?php endif; ?>">
   <div class="container-fluid">
     <blockquote

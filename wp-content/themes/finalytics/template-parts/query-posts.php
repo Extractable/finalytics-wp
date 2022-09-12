@@ -56,7 +56,6 @@
 
           <?php else: ?>
             <p class="no-content"><?php get_template_part('template-parts/content', 'none'); ?></p>
-
           <?php endif; ?>
 
         <?php elseif (get_field('query_posts_posts_per_row') == 'four'): ?>
@@ -90,7 +89,6 @@
                 </div>
               <?php endwhile; ?>
             </div>
-
             <div class="pagination">
               <?php $total_pages = $the_query->max_num_pages;
               if ($total_pages > 1) {
@@ -115,8 +113,6 @@
 
           <?php endif; ?>
         <?php endif; ?>
-
-
       </div>
     </section>
   </div>
