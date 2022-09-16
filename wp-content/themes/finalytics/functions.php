@@ -305,3 +305,24 @@ function finalytics_custom_excerpt_length( $length ) {
   return 20;
 }
 add_filter( 'excerpt_length', 'finalytics_custom_excerpt_length', 999 );
+
+/*-----------------------------------------------------------------------------------*/
+/* Move Yoast to bottom
+/*-----------------------------------------------------------------------------------*/
+function yoasttobottom() {
+	return 'low';
+}
+add_filter( 'wpseo_metabox_prio', 'yoasttobottom');
+
+/*-----------------------------------------------------------------------------------*/
+/* Removes width and height attributes from image tags
+/*-----------------------------------------------------------------------------------*/
+function remove_image_size_attributes( $html ) {
+return preg_replace( '/(width|height)="\d*"/', '', $html );
+}
+
+// Remove image size attributes from post thumbnails
+add_filter( 'post_thumbnail_html', 'remove_image_size_attributes' );
+
+// Remove image size attributes from images added to a WordPress post
+add_filter( 'image_send_to_editor', 'remove_image_size_attributes' );
