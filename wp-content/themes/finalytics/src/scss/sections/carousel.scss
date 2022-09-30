@@ -110,6 +110,7 @@
   }
   .carousel-two-col__slide-title {
     margin-bottom: 21px;
+    letter-spacing: 0.2px;
     @include media-breakpoint-up(md){
       margin-bottom: 30px;
     }

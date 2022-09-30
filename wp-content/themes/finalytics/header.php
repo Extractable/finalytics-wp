@@ -34,7 +34,7 @@
 	<header id="masthead" class="site-header scheme-light">
     <div class="container-xl">
       <div class="row">
-        <div class="col-6 col-sm-2">
+        <div class="col-6 col-md-2">
           <div class="site-branding">
             <div class="site-logo">
               <div class="site-logo_inverse">
@@ -63,7 +63,7 @@
             <?php endif; ?>
           </div><!-- .site-branding -->
         </div>
-        <div class="col-6 col-sm-10">
+        <div class="col-6 col-md-10">
           <div class="header-navbar">
             <div class="navbar-holder">
               <nav id="site-navigation" class="main-navigation">

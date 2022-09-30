@@ -12543,7 +12543,8 @@ body {
       .carousel-two-col .carousel-two-col__slide-eyebrow {
         margin-bottom: 20px; } }
   .carousel-two-col .carousel-two-col__slide-title {
-    margin-bottom: 21px; }
+    margin-bottom: 21px;
+    letter-spacing: 0.2px; }
     @media (min-width: 768px) {
       .carousel-two-col .carousel-two-col__slide-title {
         margin-bottom: 30px; } }
