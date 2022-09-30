@@ -20,7 +20,7 @@
         <?php if (!empty(get_field("hero_small_eyebrow"))): ?>
           <span class="hero-small_eyebrow"><?php echo get_field("hero_small_eyebrow"); ?></span>
         <?php endif; ?>
-        <h1 class="h1-small hero-small_title"><?php if (get_field("hero_small_title")) echo get_field("hero_small_title"); ?></h1>
+        <h1 class="h1-medium hero-small_title"><?php echo wp_trim_words( get_field("hero_small_title"), 4, '' ); ?></h1>
         <?php if (!empty(get_field("hero_small_text"))): ?>
           <p class="hero-small_text"><?php echo get_field("hero_small_text"); ?></p>
         <?php endif; ?>

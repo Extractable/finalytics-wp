@@ -250,3 +250,28 @@ body {
     }
   }
 }
+.scheme_dark-blue {
+  .contact-form_row {
+    .wpcf7-form-control-wrap {
+      input {
+        border-color: $input-border-color;
+        background: $deep-blue;
+        color: $gray5;
+        &::placeholder {
+          color: $gray5;
+        }
+      }
+      select {
+        border-color: $input-border-color;
+        color: $gray5;
+        background: $deep-blue url("../img/arrow-down.svg") no-repeat 94% 55%;
+      }
+    }
+  }
+  .wpcf7-form {
+    .wpcf7-response-output {
+      border-color: $turquoise !important;
+      color: $white !important;
+    }
+  }
+}

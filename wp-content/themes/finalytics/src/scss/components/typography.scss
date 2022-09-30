@@ -21,6 +21,13 @@ h1, .h1 {
 		font-size: 56px;
 	}
 }
+.h1-medium {
+	font-size: 39px;
+	line-height: 1.25;
+	@include media-breakpoint-up(md){
+		font-size: 56px;
+	}
+}
 .h1-small {
 	font-size: 34px;
 	line-height: 1.25;

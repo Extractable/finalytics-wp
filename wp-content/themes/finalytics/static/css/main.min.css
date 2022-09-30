@@ -10601,6 +10601,13 @@ h1, .h1 {
       line-height: 70px;
       font-size: 56px; } }
 
+.h1-medium {
+  font-size: 39px;
+  line-height: 1.25; }
+  @media (min-width: 768px) {
+    .h1-medium {
+      font-size: 56px; } }
+
 .h1-small {
   font-size: 34px;
   line-height: 1.25; }
@@ -10938,6 +10945,30 @@ body {
 .scheme_white .wpcf7-form .wpcf7-response-output {
   border-color: #0947B5 !important;
   color: #626A86 !important; }
+
+.scheme_dark-blue .contact-form_row .wpcf7-form-control-wrap input {
+  border-color: #383D51;
+  background: #070E27;
+  color: #C0C1C6; }
+  .scheme_dark-blue .contact-form_row .wpcf7-form-control-wrap input::-webkit-input-placeholder {
+    color: #C0C1C6; }
+  .scheme_dark-blue .contact-form_row .wpcf7-form-control-wrap input::-moz-placeholder {
+    color: #C0C1C6; }
+  .scheme_dark-blue .contact-form_row .wpcf7-form-control-wrap input:-ms-input-placeholder {
+    color: #C0C1C6; }
+  .scheme_dark-blue .contact-form_row .wpcf7-form-control-wrap input::-ms-input-placeholder {
+    color: #C0C1C6; }
+  .scheme_dark-blue .contact-form_row .wpcf7-form-control-wrap input::placeholder {
+    color: #C0C1C6; }
+
+.scheme_dark-blue .contact-form_row .wpcf7-form-control-wrap select {
+  border-color: #383D51;
+  color: #C0C1C6;
+  background: #070E27 url("../img/arrow-down.svg") no-repeat 94% 55%; }
+
+.scheme_dark-blue .wpcf7-form .wpcf7-response-output {
+  border-color: #43E8E0 !important;
+  color: #fff !important; }
 
 .menu {
   display: -webkit-box;
@@ -12129,6 +12160,8 @@ body {
           display: inline-block; }
           .hero-media .hero-media_cta .btn + .btn.btn-link {
             text-align: center; } }
+  .hero-media .hero-media_media .embed-container {
+    border-radius: 24px; }
   .hero-media .hero-media_media img {
     height: auto;
     max-width: 100%; }
@@ -14009,6 +14042,8 @@ p.promo-offset_text {
         -webkit-box-pack: center;
             -ms-flex-pack: center;
                 justify-content: center; } }
+  .beaf-slider .beer-slider {
+    display: block; }
   .beaf-slider .beaf_nav-item .nav-link {
     color: #fff;
     font-size: 16px;
