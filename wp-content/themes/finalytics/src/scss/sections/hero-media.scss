@@ -95,12 +95,21 @@
     filter: blur(160.628px);
     display: none;
     z-index: 0;
+    @-moz-document url-prefix() {
+      opacity: 0.5;
+    }
     @include media-breakpoint-up(md){
       width: 1165px;
       height: 645px;
       margin-left: -600px;
       bottom: -400px;
       filter: blur(418px);
+      @-moz-document url-prefix() {
+        opacity: 0.3;
+        width: 600px;
+        margin-left: -300px;
+        bottom: -273px;
+      }
     }
   }
   &.scheme-dark {

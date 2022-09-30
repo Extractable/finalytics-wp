@@ -159,6 +159,9 @@
     filter: blur(160.628px);
     display: none;
     z-index: 0;
+    @-moz-document url-prefix() {
+      opacity: 0.4;
+    }
     @include media-breakpoint-up(md){
       width: 1165px;
       height: 645px;

@@ -65,6 +65,9 @@
     font-size: $fs-md;
     line-height: 1.4;
     margin-bottom: 23px;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
   img.aligncenter {
     margin: 35px 0 0;

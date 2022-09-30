@@ -100,6 +100,10 @@
       left: unset;
       bottom: unset;
       filter: blur(400.14px);
+      @-moz-document url-prefix() {
+        opacity: 0.3;
+        width: 220px;
+      }
     }
   }
 }
