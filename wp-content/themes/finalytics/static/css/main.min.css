@@ -10618,7 +10618,7 @@ h1, .h1 {
 h2, .h2 {
   font-size: 28px;
   line-height: 1.2;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 24px;
   letter-spacing: -1px;
   width: 100%; }
@@ -14402,10 +14402,7 @@ p.promo-offset_text {
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; } }
+            justify-content: space-between; } }
 
 .recommended-main_item {
   margin-bottom: 40px; }
@@ -14458,17 +14455,18 @@ p.promo-offset_text {
   color: #0947B5;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 16px;
-  margin-bottom: 8px;
+  font-size: 14px;
+  margin-bottom: 11px;
   display: block; }
 
 .recommended-main_title {
   color: #08102A;
-  margin-bottom: 12px; }
+  margin-bottom: 12px;
+  line-height: 1.2; }
   @media (min-width: 768px) {
     .recommended-main_title {
       font-size: 30px;
-      margin-bottom: 22px; } }
+      margin-bottom: 16px; } }
 
 .recommended-main_excerpt {
   font-size: 16px;
