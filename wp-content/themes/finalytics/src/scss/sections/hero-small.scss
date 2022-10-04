@@ -49,7 +49,7 @@
   .hero-small_text {
     font-size: $fs-rg;
     @include media-breakpoint-up(md){
-      font-size: $fs-lg;
+      font-size: $fs-md;
     }
   }
   .hero-small_cta {

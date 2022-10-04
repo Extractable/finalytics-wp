@@ -21,7 +21,7 @@
   <div class="container">
     <div class="blog-preview_content">
       <h2 class="h2 blog-preview_title"><?php if (get_field("blog_preview_title")) echo get_field("blog_preview_title"); ?></h2>
-      <p class="blog-preview_text"><?php if (get_field("blog_preview_text")) echo get_field("blog_preview_text"); ?></p>
+      <div class="blog-preview_text"><?php if (get_field("blog_preview_text")) echo get_field("blog_preview_text"); ?></div>
       <div class="blog-preview_list">
         <?php $blog_preview_posts = get_field('blog_preview_posts');
         if ($blog_preview_posts): ?>

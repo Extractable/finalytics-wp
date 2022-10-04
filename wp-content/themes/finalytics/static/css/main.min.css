@@ -11616,9 +11616,9 @@ body {
   .site-header.active {
     top: 0; }
     .site-header.active.scheme-light {
-      background-color: rgba(255, 255, 255, 0.75); }
+      background-color: rgba(255, 255, 255, 0.9); }
     .site-header.active.scheme-dark {
-      background-color: rgba(8, 16, 42, 0.75); }
+      background-color: rgba(8, 16, 42, 0.9); }
 
 .site-header {
   padding: 20px 0; }
@@ -12267,7 +12267,7 @@ body {
     font-size: 16px; }
     @media (min-width: 768px) {
       .hero-small .hero-small_text {
-        font-size: 20px; } }
+        font-size: 18px; } }
   .hero-small .hero-small_cta {
     margin-top: 27px; }
     .hero-small .hero-small_cta .btn + .btn {
@@ -14134,7 +14134,8 @@ p.promo-offset_text {
             align-items: center;
     height: 100%; }
   .request-form .request-form_title {
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    font-weight: 600; }
   .request-form p.request-form_text {
     margin-bottom: 42px; }
   .request-form .request-form_email {

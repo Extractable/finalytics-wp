@@ -7,16 +7,16 @@
 	align-items: center;
 	transition: background-color ease-out $transition;
 	z-index: 999;
-	@include media-breakpoint-up(xl){
+	@include media-breakpoint-up(xl) {
 		min-height: 100px;
 	}
 	&.active{
 		top: 0;
 		&.scheme-light {
-			background-color: rgba(255, 255, 255, .75);
+			background-color: rgba(255, 255, 255, .9);
 		}
 		&.scheme-dark {
-			background-color: rgba(8, 16, 42, .75);
+			background-color: rgba(8, 16, 42, .9);
 		}
 	}
 }
